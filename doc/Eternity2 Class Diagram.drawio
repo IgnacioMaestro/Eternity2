@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-02-26T16:15:47.273Z" agent="5.0 (Android 6.0)" etag="nTy1RCa559jQXLzNqTVk" version="14.4.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-26T16:29:21.993Z" agent="5.0 (Android 6.0)" etag="KcubMB3UAq674gHLyCW6" version="14.4.3" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Domain">
-    <mxGraphModel dx="2044" dy="1106" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2044" dy="1250" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -362,6 +362,14 @@
             <mxPoint x="132.5" y="869.9999999999998" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="eOAAUHZfBTH_F-oQbjJN" name="Use-cases">
+    <mxGraphModel dx="14600" dy="8929" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="2Ws-z0luQ3OQnldRYa-Y-0" />
+        <mxCell id="2Ws-z0luQ3OQnldRYa-Y-1" parent="2Ws-z0luQ3OQnldRYa-Y-0" />
       </root>
     </mxGraphModel>
   </diagram>
