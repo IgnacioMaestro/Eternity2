@@ -1,0 +1,28 @@
+@startuml
+class Game
+class Board {
+    width: integer
+    length: integer
+}
+class Pieces
+class Square
+class Piece
+class Color
+class Side
+class Situation
+class Placed
+class Rotation
+class Way
+Game *--> Board
+Game *--> Pieces
+Game *--> Way
+Board *--> "1..N" Square
+Pieces *--> "N" Color: Possible
+Pieces *--> "1..N" Piece :""
+Piece *--> "4" Side :""
+Way *--> "1..N" Situation
+Side o--> Color
+Situation *--> "0..N" Placed :""
+Placed o--> Piece
+Placed o--> Rotation
+@enduml
