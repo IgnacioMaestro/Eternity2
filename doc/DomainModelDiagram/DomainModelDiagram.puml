@@ -13,6 +13,7 @@ class Situation
 class Placed
 class Rotation
 class Way
+class Step
 Game *--> Board
 Game *--> Pieces
 Game *--> Way
@@ -20,7 +21,9 @@ Board *--> "1..N" Square
 Pieces *--> "N" Color: Possible
 Pieces *--> "1..N" Piece :""
 Piece *--> "4" Side :""
-Way *--> "1..N" Situation
+Way *--> Situation
+Way *--> "1..N" Step : ""
+Step *--> "0..N" Way : ""
 Side o--> Color
 Situation *--> "0..N" Placed :""
 Placed o--> Piece
