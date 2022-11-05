@@ -1,38 +1,59 @@
 @startuml
 package Game{
-class Game
-class Board {
-    width: integer
-    length: integer
-}
-class Square
-class PieceSet
-class Piece
-class Color
-class Side
-Game *--> Board
-Game *--> PieceSet
-Board *--> "1..N" Square
-PieceSet *--> "N" Color: Possible
-PieceSet *--> "1..N" Piece :""
-Piece *--> "4" Side :""
-Side o--> Color
+    class Game
+    class Board {
+        width: integer
+        length: integer
+    }
+    class Square
+    class PieceSet
+    class Piece
+    class Color
+    class Side
+
+    Game *--> Board
+    Game *--> PieceSet
+    Board *--> "1..N" Square
+    PieceSet *--> "N" Color: Possible
+    Piece *--> Up
+    Piece *--> Right
+    Piece *--> Down
+    Piece *--> Left
+    PieceSet *--> "1..N" Piece
+    Side o--> Color
+    Side <|-- Up : ""
+    Side <|-- Right
+    Side <|-- Down: ""
+    Side <|-- Left
 }
 package Situation {
-class Situation
-class Placed
-class Rotation
-Situation *--> "0..N" Placed :""
-Placed o--> Rotation
+    class Situation
+    class Placed
+    class Rotation
+
+    Placed o--> Rotation
+    Situation *--> "0..N" Placed
+    Rotation <|-- Degree0
+    Rotation <|-- Degree90
+    Rotation <|-- Degree180
+    Rotation <|-- Degree270
 }
-package Way {
-class Way
-class Step
-Way *--> "1..N" Step : ""
-Step *--> "0..N" Way
+package Itinerary {
+    class Itinerary {
+        name: string
+    }
+    class Path
+    class Step {
+        order: integer
+    }
+
+    Path *--> "1..N" Step
+    Itinerary *--> Path
+    Step *--> "0..N" Path : "generated ones"
 }
-Way o--> Game : ""
-Way *--> Situation : ""
+Path o--> Game
+Path *--> Situation
 Placed o--> Square
 Placed o--> Piece
+Step o--> Square
 @enduml
