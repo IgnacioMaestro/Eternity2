@@ -51,8 +51,8 @@ package Itinerary {
     Itinerary *--> Path
     Step *--> "0..N" Path : "generated ones"
 }
-Path o--> Game
-Path *--> Situation
+Path o--> Game.Game
+Path *--> Situation.Situation
 Placed o--> Square
 Placed o--> Piece
 Step o--> Square
