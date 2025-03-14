@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+actor Admin
+package Situation {
+  Admin --> (Create Situation)
+}
+
+package Way {
+  Admin --> (Create Itinerary)
+}
+@enduml
