@@ -32,7 +32,7 @@ class PieceSet:
     __piece_list: list[Piece]
 
     def __init__(self):
-        pieces_1_17 = [
+        pieces_1_16 = [
             Piece(1, PieceSet.ORANGE_BLUE, PieceSet.PINK_BLUE, PieceSet.BORDER, PieceSet.BORDER),
             Piece(2, PieceSet.ORANGE_BLUE, PieceSet.GREEN_DARK_BLUE, PieceSet.BORDER, PieceSet.BORDER),
             Piece(3, PieceSet.DARK_BLUE_YELLOW, PieceSet.PINK_BLUE, PieceSet.BORDER, PieceSet.BORDER),
@@ -52,10 +52,11 @@ class PieceSet:
                   PieceSet.ORANGE_BLUE),
             Piece(14, PieceSet.PINK_YELLOW_CASTLE, PieceSet.GREEN_DARK_BLUE, PieceSet.BORDER, PieceSet.ORANGE_BLUE),
             Piece(15, PieceSet.PURPLE_BLUE_SPADE, PieceSet.ORANGE_BLUE, PieceSet.BORDER, PieceSet.DARK_BLUE_YELLOW),
-            Piece(16, PieceSet.YELLOW_BLUE_STAR, PieceSet.PINK_BLUE, PieceSet.BORDER, PieceSet.DARK_BLUE_YELLOW),
+            Piece(16, PieceSet.YELLOW_BLUE_STAR, PieceSet.PINK_BLUE, PieceSet.BORDER, PieceSet.DARK_BLUE_YELLOW)
+            ]
+        pieces_17_32 = [
             Piece(17, PieceSet.GREEN_PINK_DOTTED_CROSS, PieceSet.BROWN_ORANGE, PieceSet.BORDER,
-                  PieceSet.DARK_BLUE_YELLOW)]
-        pieces_18_34 = [
+                  PieceSet.DARK_BLUE_YELLOW),
             Piece(18, PieceSet.MAROON_YELLOW_STAR, PieceSet.BROWN_ORANGE, PieceSet.BORDER, PieceSet.DARK_BLUE_YELLOW),
             Piece(19, PieceSet.BLUE_PINK_CASTLE, PieceSet.DARK_BLUE_YELLOW, PieceSet.BORDER, PieceSet.DARK_BLUE_YELLOW),
             Piece(20, PieceSet.YELLOW_GREEN_SQUARE, PieceSet.DARK_BLUE_YELLOW, PieceSet.BORDER,
@@ -80,14 +81,14 @@ class PieceSet:
             Piece(31,
                   PieceSet.YELLOW_GREEN_SQUARE, PieceSet.DARK_BLUE_YELLOW, PieceSet.BORDER, PieceSet.PINK_BLUE),
             Piece(32,
-                  PieceSet.ORANGE_PURPLE_STAR, PieceSet.PINK_BLUE, PieceSet.BORDER, PieceSet.PINK_BLUE),
+                  PieceSet.ORANGE_PURPLE_STAR, PieceSet.PINK_BLUE, PieceSet.BORDER, PieceSet.PINK_BLUE)
+        ]
+        pieces_33_48 = [
             Piece(33,
                   PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS, PieceSet.DARK_BLUE_YELLOW, PieceSet.BORDER,
                   PieceSet.PINK_BLUE),
             Piece(34,
-                  PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS, PieceSet.GREEN_DARK_BLUE, PieceSet.BORDER, PieceSet.PINK_BLUE)
-        ]
-        pieces_35_51 = [
+                  PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS, PieceSet.GREEN_DARK_BLUE, PieceSet.BORDER, PieceSet.PINK_BLUE),
             Piece(35, PieceSet.DARK_BLUE_BLUE_SQUARE, PieceSet.BROWN_ORANGE, PieceSet.BORDER, PieceSet.PINK_BLUE),
             Piece(36, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE, PieceSet.GREEN_DARK_BLUE, PieceSet.BORDER,
                   PieceSet.PINK_BLUE),
@@ -107,12 +108,12 @@ class PieceSet:
             Piece(47, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS, PieceSet.GREEN_DARK_BLUE, PieceSet.BORDER,
                   PieceSet.GREEN_DARK_BLUE),
             Piece(48, PieceSet.DARK_BLUE_BLUE_SQUARE, PieceSet.GREEN_DARK_BLUE, PieceSet.BORDER,
-                  PieceSet.GREEN_DARK_BLUE),
+                  PieceSet.GREEN_DARK_BLUE)
+        ]
+        pieces_49_64 = [
             Piece(49, PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.BROWN_ORANGE, PieceSet.BORDER, PieceSet.BROWN_ORANGE),
             Piece(50, PieceSet.PURPLE_BLUE_SPADE, PieceSet.ORANGE_BLUE, PieceSet.BORDER, PieceSet.BROWN_ORANGE),
-            Piece(51, PieceSet.PURPLE_BLUE_SPADE, PieceSet.DARK_BLUE_YELLOW, PieceSet.BORDER, PieceSet.BROWN_ORANGE)
-        ]
-        pieces_52_67 = [
+            Piece(51, PieceSet.PURPLE_BLUE_SPADE, PieceSet.DARK_BLUE_YELLOW, PieceSet.BORDER, PieceSet.BROWN_ORANGE),
             Piece(52, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.ORANGE_BLUE, PieceSet.BORDER,
                   PieceSet.BROWN_ORANGE),
             Piece(53, PieceSet.BLUE_PINK_CASTLE, PieceSet.GREEN_DARK_BLUE, PieceSet.BORDER, PieceSet.BROWN_ORANGE),
@@ -136,7 +137,9 @@ class PieceSet:
                   PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.PURPLE_BLUE_SPADE),
             Piece(64,
                   PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS,
-                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_BLUE_STAR),
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_BLUE_STAR)
+        ]
+        pieces_65_80 = [
             Piece(65,
                   PieceSet.YELLOW_BLUE_STAR, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE,
                   PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_BLUE_STAR),
@@ -145,9 +148,7 @@ class PieceSet:
                   PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_BLUE_STAR),
             Piece(67,
                   PieceSet.GREEN_ORANGE_SPADE, PieceSet.PURPLE_BLUE_SPADE,
-                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_BLUE_STAR)
-        ]
-        pieces_68_83 = [
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_BLUE_STAR),
             Piece(68, PieceSet.ORANGE_PURPLE_STAR, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE,
                   PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_BLUE_STAR),
             Piece(69, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS,
@@ -181,9 +182,10 @@ class PieceSet:
             Piece(83, PieceSet.GREEN_ORANGE_SPADE, PieceSet.BLUE_PINK_SPADE,
                   PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.BLUE_PINK_SPADE)
         ]
+        pieces_81_96 = []
         self.__piece_list = []
-        self.__piece_list.extend(pieces_1_17)
-        self.__piece_list.extend(pieces_18_34)
-        self.__piece_list.extend(pieces_35_51)
-        self.__piece_list.extend(pieces_52_67)
-        self.__piece_list.extend(pieces_68_83)
+        self.__piece_list.extend(pieces_1_16)
+        self.__piece_list.extend(pieces_17_32)
+        self.__piece_list.extend(pieces_33_48)
+        self.__piece_list.extend(pieces_49_64)
+        self.__piece_list.extend(pieces_65_80)
