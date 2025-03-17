@@ -19,11 +19,11 @@ package Game{
 }
 package Situation {
     class Situation
-    class Placed
+    class PlacedPiece
     class Rotation
 
-    Placed o--> Rotation
-    Situation *--> "0..N" Placed
+    PlacedPiece o--> Rotation
+    Situation *--> "0..N" PlacedPiece
     Rotation <|-- Degree0
     Rotation <|-- Degree90
     Rotation <|-- Degree180
@@ -44,7 +44,7 @@ package Itinerary {
 }
 Path o--> Game.Game
 Path *--> Situation.Situation
-Placed o--> Square
-Placed o--> Piece
+PlacedPiece o--> Square
+PlacedPiece o--> Piece
 Step o--> Square
 @enduml
