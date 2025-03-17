@@ -210,7 +210,67 @@ class PieceSet:
             Piece(82, PieceSet.YELLOW_BLUE_STAR, PieceSet.YELLOW_BLUE_STAR,
                   PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.BLUE_PINK_SPADE),
             Piece(83, PieceSet.GREEN_ORANGE_SPADE, PieceSet.BLUE_PINK_SPADE,
-                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.BLUE_PINK_SPADE)
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.BLUE_PINK_SPADE),
+            Piece(84, PieceSet.YELLOW_BLUE_STAR, PieceSet.MAROON_YELLOW_STAR,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_DARK_BLUE_CASTLE),
+            Piece(85, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.GREEN_PINK_DOTTED_CROSS,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_DARK_BLUE_CASTLE),
+            Piece(86, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS, PieceSet.YELLOW_DARK_BLUE_CASTLE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_DARK_BLUE_CASTLE),
+            Piece(87, PieceSet.DARK_BLUE_BLUE_SQUARE, PieceSet.ORANGE_PURPLE_STAR,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.YELLOW_DARK_BLUE_CASTLE),
+            Piece(88, PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.PINK_YELLOW_CASTLE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.ORANGE_PURPLE_STAR),
+            Piece(89, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.ORANGE_PURPLE_STAR),
+            Piece(90, PieceSet.BLUE_PINK_SPADE, PieceSet.DARK_BLUE_BLUE_SQUARE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.ORANGE_PURPLE_STAR),
+            Piece(91, PieceSet.GREEN_ORANGE_SPADE, PieceSet.YELLOW_DARK_BLUE_CASTLE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS),
+            Piece(92, PieceSet.MAROON_YELLOW_STAR, PieceSet.YELLOW_GREEN_SQUARE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS),
+            Piece(93, PieceSet.MAROON_YELLOW_STAR, PieceSet.BLUE_PINK_SPADE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS),
+            Piece(94, PieceSet.BLUE_PINK_SPADE, PieceSet.PINK_YELLOW_CASTLE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS),
+            Piece(95, PieceSet.YELLOW_DARK_BLUE_CASTLE, PieceSet.GREEN_PINK_DOTTED_CROSS,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS),
+            Piece(96, PieceSet.PINK_YELLOW_CASTLE, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.PINK_YELLOW_CASTLE)
+        ]
+        pieces_97_112 = [
+            Piece(97, PieceSet.BLUE_PINK_SPADE, PieceSet.MAROON_YELLOW_STAR,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE),
+            Piece(98, PieceSet.ORANGE_PURPLE_STAR, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE),
+            Piece(99, PieceSet.PINK_YELLOW_CASTLE, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE),
+            Piece(100, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE, PieceSet.PINK_YELLOW_CASTLE,
+                  PieceSet.PINK_YELLOW_DOTTED_CROSS, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE),
+            Piece(101, PieceSet.YELLOW_DARK_BLUE_CASTLE, PieceSet.YELLOW_GREEN_SQUARE,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.PURPLE_BLUE_SPADE),
+            Piece(102, PieceSet.YELLOW_DARK_BLUE_CASTLE, PieceSet.DARK_BLUE_BLUE_SQUARE,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.PURPLE_BLUE_SPADE),
+            Piece(103, PieceSet.DARK_BLUE_BLUE_SQUARE, PieceSet.MAROON_YELLOW_STAR,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.PURPLE_BLUE_SPADE),
+            Piece(104, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.PURPLE_BLUE_SPADE),
+            Piece(105, PieceSet.BLUE_PINK_SPADE, PieceSet.YELLOW_GREEN_SQUARE,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.YELLOW_BLUE_STAR),
+            Piece(106, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE),
+            Piece(107, PieceSet.MAROON_YELLOW_STAR, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE),
+            Piece(108, PieceSet.BLUE_PINK_SPADE, PieceSet.YELLOW_GREEN_SQUARE,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE),
+            Piece(109, PieceSet.DARK_BLUE_BLUE_SQUARE, PieceSet.GREEN_ORANGE_SPADE,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE),
+            Piece(110, PieceSet.YELLOW_GREEN_SQUARE, PieceSet.YELLOW_DARK_BLUE_CASTLE,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.GREEN_PINK_DOTTED_CROSS),
+            Piece(111, PieceSet.YELLOW_DARK_BLUE_CASTLE, PieceSet.YELLOW_GREEN_SQUARE,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.GREEN_PINK_DOTTED_CROSS),
+            Piece(112, PieceSet.ORANGE_PURPLE_STAR, PieceSet.MAROON_YELLOW_STAR,
+                  PieceSet.PURPLE_BLUE_SPADE, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE)
         ]
         self.__piece_list = []
         self.__piece_list.extend(pieces_1_16)
@@ -219,3 +279,4 @@ class PieceSet:
         self.__piece_list.extend(pieces_49_64)
         self.__piece_list.extend(pieces_65_80)
         self.__piece_list.extend(pieces_81_96)
+        self.__piece_list.extend(pieces_97_112)
