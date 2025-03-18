@@ -7,3 +7,7 @@ class Board:
         for column in range(256):
             for row in range(256):
                 self.__squares[column].append(Square(column, row))
+
+    def get_square(self, column: int, row: int) -> Square:
+        return self.__squares[column][row]
+

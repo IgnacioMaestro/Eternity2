@@ -350,3 +350,6 @@ class PieceSet:
         self.__piece_list.extend(pieces_97_112)
         self.__piece_list.extend(pieces_113_128)
         self.__piece_list.extend(pieces_129_144)
+
+    def get_piece(self, piece_number: int) -> Piece:
+        return self.__piece_list[piece_number - 1]
