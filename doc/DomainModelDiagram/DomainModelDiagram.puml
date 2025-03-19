@@ -5,8 +5,14 @@ package Game{
     class PieceSet
     class Piece {
         number: integer
-        }
-    class Color
+    }
+    class Color {
+        color_id: integer
+        name: string
+    }
+    class CSSColorCode {
+        hex_code: string
+    }
 
     Board *--> "1.N" Square
     PieceSet *--> "N" Color: Possible
@@ -15,6 +21,8 @@ package Game{
     Piece "left" *--> Color
     Piece "right" *--> Color
     PieceSet *--> "1.N" Piece
+    Color "main_color" *--> CSSColorCode
+    Color "secondary_color" *--> CSSColorCode
 }
 package Situation {
     class Situation
