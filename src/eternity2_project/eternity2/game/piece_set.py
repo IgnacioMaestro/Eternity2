@@ -340,6 +340,74 @@ class PieceSet:
             Piece(144, PieceSet.PINK_YELLOW_CASTLE, PieceSet.PINK_YELLOW_CASTLE,
                   PieceSet.YELLOW_BLUE_STAR, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE)
         ]
+        pieces_145_160 = [
+            Piece(145, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE, PieceSet.BLUE_PINK_SPADE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.GREEN_PINK_DOTTED_CROSS),
+            Piece(146, PieceSet.YELLOW_BLUE_STAR, PieceSet.YELLOW_DARK_BLUE_CASTLE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE),
+            Piece(147, PieceSet.YELLOW_BLUE_STAR, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE),
+            Piece(148, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE, PieceSet.GREEN_PINK_DOTTED_CROSS,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE),
+            Piece(149, PieceSet.YELLOW_GREEN_SQUARE, PieceSet.YELLOW_DARK_BLUE_CASTLE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE),
+            Piece(150, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.GREEN_ORANGE_SPADE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.MAROON_YELLOW_STAR),
+            Piece(151, PieceSet.BLUE_PINK_SPADE, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.MAROON_YELLOW_STAR),
+            Piece(152, PieceSet.GREEN_ORANGE_SPADE, PieceSet.GREEN_ORANGE_SPADE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.BLUE_PINK_CASTLE),
+            Piece(153, PieceSet.GREEN_ORANGE_SPADE, PieceSet.MAROON_YELLOW_STAR,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.BLUE_PINK_CASTLE),
+            Piece(154, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE, PieceSet.DARK_BLUE_BLUE_SQUARE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.BLUE_PINK_CASTLE),
+            Piece(155, PieceSet.BLUE_PINK_CASTLE, PieceSet.BLUE_PINK_CASTLE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.BLUE_PINK_SPADE),
+            Piece(156, PieceSet.BLUE_PINK_CASTLE, PieceSet.YELLOW_DARK_BLUE_CASTLE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.BLUE_PINK_SPADE),
+            Piece(157, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE, PieceSet.BLUE_PINK_CASTLE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.BLUE_PINK_SPADE),
+            Piece(158, PieceSet.BLUE_PINK_CASTLE, PieceSet.DARK_BLUE_BLUE_SQUARE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.ORANGE_PURPLE_STAR),
+            Piece(159, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.ORANGE_PURPLE_STAR),
+            Piece(160, PieceSet.PINK_YELLOW_CASTLE, PieceSet.PINK_YELLOW_CASTLE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS)
+        ]
+        pieces_161_176 = [
+            Piece(161, PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.ORANGE_PURPLE_STAR,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.DARK_BLUE_BLUE_SQUARE),
+            Piece(162, PieceSet.GREEN_PINK_DOTTED_CROSS, PieceSet.ORANGE_PURPLE_STAR,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.DARK_BLUE_BLUE_SQUARE),
+            Piece(163, PieceSet.YELLOW_GREEN_SQUARE, PieceSet.GREEN_ORANGE_SPADE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE),
+            Piece(164, PieceSet.BLUE_PINK_SPADE, PieceSet.DARK_BLUE_BLUE_SQUARE,
+                  PieceSet.YELLOW_BLUE_STAR, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE),
+            Piece(165, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE, PieceSet.BLUE_PINK_SPADE,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.GREEN_PINK_DOTTED_CROSS),
+            Piece(166, PieceSet.BLUE_PINK_SPADE, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.GREEN_PINK_DOTTED_CROSS),
+            Piece(167, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE, PieceSet.MAROON_GREEN_CROSS_IN_CIRCLE,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.GREEN_ORANGE_SPADE),
+            Piece(168, PieceSet.GREEN_ORANGE_SPADE, PieceSet.YELLOW_GREEN_SQUARE,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.MAROON_YELLOW_STAR),
+            Piece(169, PieceSet.MAROON_YELLOW_STAR, PieceSet.PINK_YELLOW_CASTLE,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.MAROON_YELLOW_STAR),
+            Piece(170, PieceSet.BLUE_PINK_SPADE, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.BLUE_PINK_CASTLE),
+            Piece(171, PieceSet.ORANGE_PURPLE_STAR, PieceSet.DARK_BLUE_BLUE_SQUARE,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.BLUE_PINK_CASTLE),
+            Piece(172, PieceSet.PINK_YELLOW_CASTLE, PieceSet.GREEN_ORANGE_SPADE,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.BLUE_PINK_CASTLE),
+            Piece(173, PieceSet.YELLOW_GREEN_SQUARE, PieceSet.YELLOW_GREEN_SQUARE,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.YELLOW_GREEN_SQUARE),
+            Piece(174, PieceSet.YELLOW_DARK_BLUE_CASTLE, PieceSet.ORANGE_PURPLE_STAR,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.YELLOW_GREEN_SQUARE),
+            Piece(175, PieceSet.BLUE_PINK_CASTLE, PieceSet.PINK_YELLOW_CASTLE,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.BLUE_PINK_SPADE),
+            Piece(176, PieceSet.BLUE_PINK_CASTLE, PieceSet.MAROON_YELLOW_STAR,
+                  PieceSet.PURPLE_YELLOW_CROSS_IN_CIRCLE, PieceSet.YELLOW_DARK_BLUE_CASTLE)
+        ]
         self.__piece_list = []
         self.__piece_list.extend(pieces_1_16)
         self.__piece_list.extend(pieces_17_32)
@@ -350,6 +418,8 @@ class PieceSet:
         self.__piece_list.extend(pieces_97_112)
         self.__piece_list.extend(pieces_113_128)
         self.__piece_list.extend(pieces_129_144)
+        self.__piece_list.extend(pieces_145_160)
+        self.__piece_list.extend(pieces_161_176)
 
     def get_piece(self, piece_number: int) -> Piece:
         return self.__piece_list[piece_number - 1]
