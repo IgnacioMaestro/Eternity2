@@ -3,16 +3,18 @@ package Game{
     class Board
     class Square
     class PieceSet
-    class Piece
+    class Piece {
+        number: integer
+        }
     class Color
 
-    Board *--> "1..N" Square
+    Board *--> "1.N" Square
     PieceSet *--> "N" Color: Possible
     Piece "up" *--> Color
     Piece "down" *--> Color
     Piece "left" *--> Color
     Piece "right" *--> Color
-    PieceSet *--> "1..N" Piece
+    PieceSet *--> "1.N" Piece
 }
 package Situation {
     class Situation
@@ -20,7 +22,7 @@ package Situation {
     class Rotation
 
     PlacedPiece o--> Rotation
-    Situation *--> "0..N" PlacedPiece
+    Situation *--> "0.N" PlacedPiece
     Rotation <|-- Degree0
     Rotation <|-- Degree90
     Rotation <|-- Degree180
@@ -35,9 +37,9 @@ package Itinerary {
         order: integer
     }
 
-    Path *--> "1..N" Step
+    Path *--> "1.N" Step
     Itinerary *--> Path
-    Step *--> "0..N" Path : "generated ones"
+    Step *--> "0.N" Path : "generated ones"
 }
 Path *--> Situation.Situation
 PlacedPiece o--> Square
