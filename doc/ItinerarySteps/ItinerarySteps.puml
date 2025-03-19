@@ -1,0 +1,42 @@
+@startuml
+package Initial{
+
+    object Itinerary {
+        +name: InitialItinerary
+    }
+
+    object Path
+
+    Itinerary *--> Path
+
+    object InitialSituation
+
+    Path *--> InitialSituation
+
+    object Step1
+    object Step2
+    object Step3
+    object Step4
+
+    Path *--> Step1
+    Path *--> Step2
+    Path *--> Step3
+    Path *--> Step4
+}
+package FirstPossibilities {
+    object Path12
+    object Path11
+    Step1 *--> Path12
+    Step1 *--> Path11
+
+    object InitialSituationPlusOnePiece
+    Path11 *--> InitialSituationPlusOnePiece
+    object Step2_1
+    object Step3_1
+    object Step4_1
+
+    Path11 *--> Step2_1
+    Path11 *--> Step3_1
+    Path11 *--> Step4_1
+}
+@enduml
