@@ -1,14 +1,11 @@
 @startuml
 package Game{
-    class Game
     class Board
     class Square
     class PieceSet
     class Piece
     class Color
 
-    Game *--> Board
-    Game *--> PieceSet
     Board *--> "1..N" Square
     PieceSet *--> "N" Color: Possible
     Piece "up" *--> Color
@@ -42,7 +39,6 @@ package Itinerary {
     Itinerary *--> Path
     Step *--> "0..N" Path : "generated ones"
 }
-Path o--> Game.Game
 Path *--> Situation.Situation
 PlacedPiece o--> Square
 PlacedPiece o--> Piece
