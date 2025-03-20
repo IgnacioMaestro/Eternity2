@@ -28,8 +28,11 @@ package Situation {
     class Situation
     class PlacedPiece
     class Rotation
+    class RotatedPiece
 
-    PlacedPiece o--> Rotation
+    RotatedPiece o--> Rotation
+    RotatedPiece o--> Piece
+    PlacedPiece o--> RotatedPiece
     Situation *--> "0.N" PlacedPiece
     Rotation <|-- Degree0
     Rotation <|-- Degree90
@@ -51,6 +54,5 @@ package Itinerary {
 }
 Path *--> Situation.Situation
 PlacedPiece o--> Square
-PlacedPiece o--> Piece
 Step o--> Square
 @enduml
