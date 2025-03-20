@@ -1,42 +1,42 @@
 @startuml
 package Initial{
 
-    object Itinerary {
+    object itinerary {
         +name: InitialItinerary
     }
 
-    object Path
+    object path_level_1
 
-    Itinerary *--> Path
+    itinerary *--> path_level_1
 
-    object InitialSituation
+    object initial_situation
 
-    Path *--> InitialSituation
+    path_level_1 *--> initial_situation
 
-    object Step1
-    object Step2
-    object Step3
-    object Step4
+    object step_1_level_1
+    object step_2_level_1
+    object step_3_level_1
+    object step_4_level_1
 
-    Path *--> Step1
-    Path *--> Step2
-    Path *--> Step3
-    Path *--> Step4
+    path_level_1 *--> step_1_level_1
+    path_level_1 *--> step_2_level_1
+    path_level_1 *--> step_3_level_1
+    path_level_1 *--> step_4_level_1
 }
 package FirstPossibilities {
-    object Path12
-    object Path11
-    Step1 *--> Path12
-    Step1 *--> Path11
+    object path_2_level_2
+    object path_1_level_2
+    step_1_level_1 *--> path_2_level_2
+    step_1_level_1 *--> path_1_level_2
 
-    object InitialSituationPlusOnePiece
-    Path11 *--> InitialSituationPlusOnePiece
-    object Step2_1
-    object Step3_1
-    object Step4_1
+    object initial_situation_plus_one_piece
+    path_1_level_2 *--> initial_situation_plus_one_piece
+    object step_1_level_2
+    object step_2_level_2
+    object step_3_level_2
 
-    Path11 *--> Step2_1
-    Path11 *--> Step3_1
-    Path11 *--> Step4_1
+    path_1_level_2 *--> step_1_level_2
+    path_1_level_2 *--> step_2_level_2
+    path_1_level_2 *--> step_3_level_2
 }
 @enduml
