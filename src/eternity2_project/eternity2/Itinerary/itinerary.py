@@ -17,7 +17,7 @@ class Itinerary:
     def create_with_first_5_pieces(cls) -> Self:
         board = Board()
         situation = Situation()
-        situation.place_piece( PieceSet().get_piece(139), board.get_square(7, 8), Rotation.DEGREE_180)
+        situation.place_piece(PieceSet().get_piece(139), board.get_square(7, 8), Rotation.DEGREE_180)
         # TODO: add another 4 pieces
         steps: list[Step] = [
             Step(board.get_square(0, 0)),
@@ -25,3 +25,6 @@ class Itinerary:
             Step(board.get_square(2, 0)),
             Step(board.get_square(2, 1))]
         return Itinerary("First 5 pieces", situation, steps)
+
+    def obtain_deepest_path(self) -> Path:
+        return self.__path.obtain_deepest_path()
