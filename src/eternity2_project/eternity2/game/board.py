@@ -5,6 +5,7 @@ class Board:
     def __init__(self):
         self.__squares: list[list[Square]] = [[]]
         for column in range(256):
+            self.__squares.append([])
             for row in range(256):
                 self.__squares[column].append(Square(column, row))
 
