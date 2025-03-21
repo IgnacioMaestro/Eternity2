@@ -2,6 +2,7 @@ from typing import Self
 
 from src.eternity2_project.eternity2.Itinerary.reference_path import ReferencePath
 from src.eternity2_project.eternity2.Itinerary.step import Step
+from src.eternity2_project.eternity2.game.square import Square
 from src.eternity2_project.eternity2.situation.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.situation.situation import Situation
 
@@ -23,10 +24,11 @@ class Path(ReferencePath):
         return self.__situation
 
     def generate_calculated_possibilities(self):
-        rotated_pieces: list[RotatedPiece] = self.__situation.calculate_possibilities()
+        square: Square = self.get_first_step().get_square()
+        rotated_pieces: list[RotatedPiece] = self.__situation.calculate_possibilities(square)
         for rotated_piece in rotated_pieces:
             situation = Situation.create_from(self.__situation)
-            situation.place_piece(rotated_piece.get_piece(), self.get_first_step().get_square(), rotated_piece.get_rotation())
+            situation.place_piece(rotated_piece.get_piece(), square, rotated_piece.get_rotation())
             path = Path(situation, self.__steps[1:])
             self.get_first_step().add_path(path)
 

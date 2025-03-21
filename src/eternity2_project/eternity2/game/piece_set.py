@@ -1,6 +1,8 @@
 from .color import Color
+from .constraints import Constraints
 from .css_color_code import CSSColorCode
 from .piece import Piece
+from ..situation.placed_piece import PlacedPiece
 
 
 class PieceSet:
@@ -493,3 +495,14 @@ class PieceSet:
 
     def get_piece(self, piece_number: int) -> Piece:
         return self.__piece_list[piece_number - 1]
+
+    def get_no_placed_pieces(self, placed_pieces: list[PlacedPiece]) -> list[Piece]:
+        pieces_without_rotation: list[Piece] = [placed_piece.get_piece() for placed_piece in placed_pieces]
+        return [piece for piece in self.__piece_list if piece not in pieces_without_rotation]
+
+    def search(self, constraints: Constraints) -> list[Piece]:
+        valid_pieces: list[Piece] = []
+        for piece in self.__piece_list:
+            if piece.is_valid(constraints):
+                valid_pieces.append(piece)
+        return valid_pieces
