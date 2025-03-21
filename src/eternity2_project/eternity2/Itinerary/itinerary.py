@@ -4,6 +4,7 @@ from src.eternity2_project.eternity2.Itinerary.path import Path
 from src.eternity2_project.eternity2.Itinerary.step import Step
 from src.eternity2_project.eternity2.game.board import Board
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
+from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
 from src.eternity2_project.eternity2.situation.rotation import Rotation
 from src.eternity2_project.eternity2.situation.situation import Situation
 
@@ -16,8 +17,7 @@ class Itinerary:
     @classmethod
     def create_with_first_5_pieces(cls) -> Self:
         board = Board()
-        situation = Situation()
-        situation.place_piece(PieceSet().get_piece(139), board.get_square(7, 8), Rotation.DEGREE_180)
+        situation = Situation([PlacedPiece(PieceSet().get_piece(139), board.get_square(7, 8), Rotation.DEGREE_180)])
         # TODO: add another 4 pieces
         steps: list[Step] = [
             Step(board.get_square(0, 0)),

@@ -16,3 +16,8 @@ class Step:
     def get_first_path(self) -> ReferencePath:
         return self.__generated_paths[0]
 
+    def count_paths(self) -> int:
+        return len(self.__generated_paths)
+
+    def get_square(self) -> Square:
+        return self.__square
