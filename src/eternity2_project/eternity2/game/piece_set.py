@@ -1,7 +1,11 @@
+from typing import Optional
+
 from .color import Color
 from .constraints import Constraints
 from .css_color_code import CSSColorCode
 from .piece import Piece
+from .rotated_piece import RotatedPiece
+from .rotation import Rotation
 from ..situation.placed_piece import PlacedPiece
 
 
@@ -500,9 +504,10 @@ class PieceSet:
         pieces_without_rotation: list[Piece] = [placed_piece.get_piece() for placed_piece in placed_pieces]
         return [piece for piece in self.__piece_list if piece not in pieces_without_rotation]
 
-    def search(self, constraints: Constraints) -> list[Piece]:
-        valid_pieces: list[Piece] = []
+    def search(self, constraints: Constraints) -> list[RotatedPiece]:
+        valid_pieces: list[RotatedPiece] = []
         for piece in self.__piece_list:
-            if piece.is_valid(constraints):
-                valid_pieces.append(piece)
+            rotation: Optional[Rotation] = piece.is_valid(constraints)
+            if rotation:
+                valid_pieces.append(RotatedPiece(piece, rotation))
         return valid_pieces

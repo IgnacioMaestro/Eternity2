@@ -1,36 +1,22 @@
-from typing import Self, Optional
+from typing import Optional
 
 from src.eternity2_project.eternity2.game.color import Color
 from src.eternity2_project.eternity2.game.constraints import Constraints
-from src.eternity2_project.eternity2.game.piece import Piece
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
 from src.eternity2_project.eternity2.game.square import Square
-from src.eternity2_project.eternity2.situation.piece_searcher import PieceSearcher
 from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
-from src.eternity2_project.eternity2.game.rotated_piece import RotatedPiece
-from src.eternity2_project.eternity2.game.rotation import Rotation
 
 
-class Situation:
-    def __init__(self, placed_pieces: list[PlacedPiece]):
+class ConstraintsCalculator:
+    def __init__(self, placed_pieces: list[PlacedPiece], square: Square):
         self.__placed_pieces: list[PlacedPiece] = placed_pieces
+        self.__square: Square = square
 
-    @classmethod
-    def create_from(cls, situation: Self) -> Self:
-        return Situation(situation.__placed_pieces)
-
-    def place_piece(self, piece: Piece, square: Square, rotation: Rotation):
-        self.__placed_pieces.append(PlacedPiece(piece, square, rotation))
-
-    def calculate_possibilities(self, square: Square) -> list[RotatedPiece]:
-        constraints: Constraints = self.__get_constraints(square)
-        return PieceSearcher(self.__placed_pieces, constraints).search()
-
-    def __get_constraints(self, square: Square) -> Constraints:
-        up_constraint: Optional[Color] = self.__get_up_constraint(square)
-        right_constraint: Optional[Color] = self.__get_right_constraint(square)
-        down_constraint: Optional[Color] = self.__get_down_constraint(square)
-        left_constraint: Optional[Color] = self.__get_left_constraint(square)
+    def calculate(self) -> Constraints:
+        up_constraint: Optional[Color] = self.__get_up_constraint(self.__square)
+        right_constraint: Optional[Color] = self.__get_right_constraint(self.__square)
+        down_constraint: Optional[Color] = self.__get_down_constraint(self.__square)
+        left_constraint: Optional[Color] = self.__get_left_constraint(self.__square)
         return Constraints(up_constraint, right_constraint, down_constraint, left_constraint)
 
     def __get_up_constraint(self, square: Square) -> Optional[Color]:
