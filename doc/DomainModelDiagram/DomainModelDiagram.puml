@@ -27,8 +27,8 @@ package Game{
 package Situation {
     class Situation
     class PlacedPiece
-    class Rotation
     class RotatedPiece
+    class Rotation
 
     RotatedPiece o--> Rotation
     RotatedPiece o--> Piece
