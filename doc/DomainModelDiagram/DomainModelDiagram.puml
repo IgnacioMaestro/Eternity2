@@ -1,43 +1,46 @@
 @startuml
-package Game{
-    class Board
-    class Square
-    class PieceSet
-    class Piece {
-        number: integer
+package Piece{
+    class CSSColorCode {
+        hex_code: string
     }
     class Color {
         color_id: integer
         name: string
     }
-    class CSSColorCode {
-        hex_code: string
+    class Piece {
+        number: integer
     }
 
-    Board *--> "1.N" Square
-    PieceSet *--> "N" Color: Possible
+    Color "main_color" *--> CSSColorCode
+    Color "secondary_color" *--> CSSColorCode
     Piece "up" *--> Color
     Piece "down" *--> Color
     Piece "left" *--> Color
     Piece "right" *--> Color
-    PieceSet *--> "1.N" Piece
-    Color "main_color" *--> CSSColorCode
-    Color "secondary_color" *--> CSSColorCode
-}
-package Situation {
-    class Situation
-    class PlacedPiece
     class RotatedPiece
     class Rotation
-
     RotatedPiece o--> Rotation
     RotatedPiece o--> Piece
-    PlacedPiece o--> RotatedPiece
-    Situation *--> "0.N" PlacedPiece
     Rotation <|-- Degree0
     Rotation <|-- Degree90
     Rotation <|-- Degree180
     Rotation <|-- Degree270
+}
+package Game{
+    class Board
+    class Square
+    class PieceSet
+
+    Board *--> "1.N" Square
+    PieceSet *--> "N" Piece.Color: Possible
+    PieceSet *--> "1.N" Piece.Piece
+}
+package Situation {
+    class Situation
+    class PlacedPiece
+
+    PlacedPiece o--> RotatedPiece
+    Situation *--> "0.N" PlacedPiece
 }
 package Itinerary {
     class Itinerary {
