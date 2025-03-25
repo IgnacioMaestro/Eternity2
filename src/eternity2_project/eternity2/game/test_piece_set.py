@@ -14,15 +14,15 @@ class TestPieceSet(TestCase):
         pieces: list[Piece] = PieceSet().get_no_placed_pieces([])
 
         # Assert
-        self.assertEqual(len(pieces), 224)
+        self.assertEqual(len(pieces), 240)
 
     def test_get_no_placed_pieces_one_placed_piece(self):
         # Arrange
-        piece: Piece = Piece(1, PieceSet.ORANGE_BLUE_CROSS, PieceSet.PINK_BLUE_CROSS, PieceSet.BORDER, PieceSet.BORDER)
+        piece: Piece = Piece(1, PieceSet.ORANGE_BLUE_CROSS, PieceSet.PINK_BLUE_CROSS, PieceSet.EDGE, PieceSet.EDGE)
         placed_piece: PlacedPiece = PlacedPiece(Board().get_square(0, 0), RotatedPiece(piece, Rotation.DEGREE_0))
 
         # Act
         pieces: list[Piece] = PieceSet().get_no_placed_pieces([placed_piece])
 
         # Assert
-        self.assertEqual(len(pieces), 223)
+        self.assertEqual(len(pieces), 239)

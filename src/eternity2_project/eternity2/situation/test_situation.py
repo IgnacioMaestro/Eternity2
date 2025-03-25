@@ -51,7 +51,7 @@ class TestSituation(TestCase):
         rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(Board().get_square(1, 0))
 
         # Assert
-        self.assertEqual(len(rotated_pieces), 60)
+        self.assertEqual(len(rotated_pieces), 56)
 
     def test_calculate_possibilities_top_border_one_placed(self):
         # Arrange
@@ -62,7 +62,7 @@ class TestSituation(TestCase):
         rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(Board().get_square(1, 0))
 
         # Assert
-        self.assertEqual(len(rotated_pieces), 59)
+        self.assertEqual(len(rotated_pieces), 55)
 
     def test_calculate_possibilities_top_border_one_placed_next_to(self):
         # Arrange
@@ -73,4 +73,4 @@ class TestSituation(TestCase):
         rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(Board().get_square(1, 0))
 
         # Assert
-        self.assertEqual(len(rotated_pieces), 9 + 2)
+        self.assertEqual(len(rotated_pieces), 9)

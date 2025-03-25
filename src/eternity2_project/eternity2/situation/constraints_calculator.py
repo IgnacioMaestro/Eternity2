@@ -21,7 +21,7 @@ class ConstraintsCalculator:
 
     def __get_up_constraint(self, square: Square) -> Optional[Color]:
         if square.is_top():
-            return PieceSet.BORDER
+            return PieceSet.EDGE
         up_placed_piece: Optional[PlacedPiece] = self.__get_up_placed_piece(square)
         if up_placed_piece is None:
             return None
@@ -29,7 +29,7 @@ class ConstraintsCalculator:
 
     def __get_right_constraint(self, square: Square) -> Optional[Color]:
         if square.is_right():
-            return PieceSet.BORDER
+            return PieceSet.EDGE
         right_placed_piece: Optional[PlacedPiece] = self.__get_right_placed_piece(square)
         if right_placed_piece is None:
             return None
@@ -37,7 +37,7 @@ class ConstraintsCalculator:
 
     def __get_down_constraint(self, square: Square) -> Optional[Color]:
         if square.is_bottom():
-            return PieceSet.BORDER
+            return PieceSet.EDGE
         down_placed_piece: Optional[PlacedPiece] = self.__get_down_placed_piece(square)
         if down_placed_piece is None:
             return None
@@ -45,7 +45,7 @@ class ConstraintsCalculator:
 
     def __get_left_constraint(self, square: Square) -> Optional[Color]:
         if square.is_left():
-            return PieceSet.BORDER
+            return PieceSet.EDGE
         left_placed_piece: Optional[PlacedPiece] = self.__get_left_placed_piece(square)
         if left_placed_piece is None:
             return None

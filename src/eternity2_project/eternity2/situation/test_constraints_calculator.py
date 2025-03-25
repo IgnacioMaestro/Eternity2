@@ -20,23 +20,23 @@ class TestConstraintsCalculator(TestCase):
         constraints: Constraints = ConstraintsCalculator([], self.top_left_corner).calculate()
 
         # Assert
-        self.assertEqual(constraints, Constraints(PieceSet.BORDER, None, None, PieceSet.BORDER))
+        self.assertEqual(constraints, Constraints(PieceSet.EDGE, None, None, PieceSet.EDGE))
 
         # Act
         constraints: Constraints = ConstraintsCalculator([], self.top_right_corner).calculate()
 
         # Assert
-        self.assertEqual(constraints, Constraints(PieceSet.BORDER, PieceSet.BORDER, None, None))
+        self.assertEqual(constraints, Constraints(PieceSet.EDGE, PieceSet.EDGE, None, None))
         # Act
         constraints: Constraints = ConstraintsCalculator([], Board().get_square(0, 15)).calculate()
 
         # Assert
-        self.assertEqual(constraints, Constraints(None, None, PieceSet.BORDER, PieceSet.BORDER))
+        self.assertEqual(constraints, Constraints(None, None, PieceSet.EDGE, PieceSet.EDGE))
         # Act
         constraints: Constraints = ConstraintsCalculator([], Board().get_square(15, 15)).calculate()
 
         # Assert
-        self.assertEqual(constraints, Constraints(None, PieceSet.BORDER, PieceSet.BORDER, None, ))
+        self.assertEqual(constraints, Constraints(None, PieceSet.EDGE, PieceSet.EDGE, None, ))
 
     def test_calculate_top_left_corner_one_next_to_placed(self):
         # Arrange
@@ -47,7 +47,7 @@ class TestConstraintsCalculator(TestCase):
         constraints: Constraints = ConstraintsCalculator([placed_piece], self.top_left_corner).calculate()
 
         # Assert
-        expected_constraints = Constraints(PieceSet.BORDER, PieceSet.DARK_BLUE_YELLOW_FLOWER, None, PieceSet.BORDER)
+        expected_constraints = Constraints(PieceSet.EDGE, PieceSet.DARK_BLUE_YELLOW_FLOWER, None, PieceSet.EDGE)
         self.assertEqual(constraints, expected_constraints)
 
     def test_calculate_top_left_corner_two_next_to_placed(self):
@@ -63,7 +63,7 @@ class TestConstraintsCalculator(TestCase):
 
         # Assert
         expected_constraints = Constraints(
-            PieceSet.BORDER, PieceSet.DARK_BLUE_YELLOW_FLOWER, PieceSet.ORANGE_BLUE_CROSS, PieceSet.BORDER)
+            PieceSet.EDGE, PieceSet.DARK_BLUE_YELLOW_FLOWER, PieceSet.ORANGE_BLUE_CROSS, PieceSet.EDGE)
         self.assertEqual(constraints, expected_constraints)
 
     def test_calculate_bottom_right_corner_two_next_to_placed(self):
@@ -79,7 +79,7 @@ class TestConstraintsCalculator(TestCase):
 
         # Assert
         expected_constraints = Constraints(
-            PieceSet.ORANGE_BLUE_CROSS, PieceSet.BORDER, PieceSet.BORDER, PieceSet.DARK_BLUE_YELLOW_FLOWER)
+            PieceSet.ORANGE_BLUE_CROSS, PieceSet.EDGE, PieceSet.EDGE, PieceSet.DARK_BLUE_YELLOW_FLOWER)
         self.assertEqual(constraints, expected_constraints)
 
     def test_calculate_normal_piece_no_placed(self):
