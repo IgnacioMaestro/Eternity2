@@ -11,6 +11,9 @@ class RotatedPiece:
     def __eq__(self, other):
         return self.__piece == other.__piece and self.__rotation == other.__rotation
 
+    def __str__(self) -> str:
+        return str(self.__piece) + str(self.__rotation)
+
     def get_piece(self) -> Piece:
         return self.__piece
 

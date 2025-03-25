@@ -19,6 +19,9 @@ class Piece:
         self.__left = left
         self.__right = right
 
+    def __str__(self)->str:
+        return self.__number
+
     def __eq__(self, other):
         return self.__number == other.__number
 

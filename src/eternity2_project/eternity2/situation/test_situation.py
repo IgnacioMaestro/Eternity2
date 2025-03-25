@@ -11,10 +11,10 @@ class TestSituation(TestCase):
     def test_calculate_possibilities_corner_no_placed(self):
         # Arrange
         situation: Situation = Situation([])
-        corner_square = Board().get_square(0, 0)
+        up_left_corner_square = Board().get_up_left_corner()
 
         # Act
-        rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(corner_square)
+        rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(up_left_corner_square)
 
         # Assert
         self.assertEqual(len(rotated_pieces), 4)

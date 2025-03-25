@@ -12,3 +12,5 @@ class Board:
     def get_square(self, column: int, row: int) -> Square:
         return self.__squares[column][row]
 
+    def get_up_left_corner(self) -> Square:
+        return self.__squares[0][0]

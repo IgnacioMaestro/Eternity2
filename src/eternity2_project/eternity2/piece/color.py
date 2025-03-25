@@ -7,3 +7,6 @@ class Color:
         self.__main_color: CSSColorCode = main_color
         self.__secondary_color: CSSColorCode = secondary_code
         self.__name: str = name
+
+    def __str__(self) -> str:
+        return self.__name
