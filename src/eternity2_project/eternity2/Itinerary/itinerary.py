@@ -19,7 +19,8 @@ class Itinerary:
     def create_with_first_5_pieces(cls) -> Self:
         board = Board()
         situation = Situation(
-            [PlacedPiece(board.get_square(7, 8), RotatedPiece(PieceSet().get_piece(139), Rotation.DEGREE_180))])
+            [PlacedPiece(board.get_square(7, 8), RotatedPiece(PieceSet().get_piece(139), Rotation.DEGREE_180)),
+             PlacedPiece(board.get_square(2, 2), RotatedPiece(PieceSet().get_piece(208), Rotation.DEGREE_270))])
         # TODO: add another 4 pieces
         steps: list[Step] = [
             Step(board.get_square(0, 0)),

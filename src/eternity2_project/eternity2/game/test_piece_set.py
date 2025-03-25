@@ -14,7 +14,7 @@ class TestPieceSet(TestCase):
         pieces: list[Piece] = PieceSet().get_no_placed_pieces([])
 
         # Assert
-        self.assertEqual(len(pieces), 208)
+        self.assertEqual(len(pieces), 224)
 
     def test_get_no_placed_pieces_one_placed_piece(self):
         # Arrange
@@ -25,4 +25,4 @@ class TestPieceSet(TestCase):
         pieces: list[Piece] = PieceSet().get_no_placed_pieces([placed_piece])
 
         # Assert
-        self.assertEqual(len(pieces), 207)
+        self.assertEqual(len(pieces), 223)
