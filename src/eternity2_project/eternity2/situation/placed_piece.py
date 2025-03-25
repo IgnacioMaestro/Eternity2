@@ -9,6 +9,9 @@ class PlacedPiece:
         self.__square: Square = square
         self.__rotated_piece: RotatedPiece = rotated_piece
 
+    def __str__(self) -> str:
+        return str(self.__rotated_piece) + ', ' + str(self.__square)
+
     def get_piece(self) -> Piece:
         return self.__rotated_piece.get_piece()
 

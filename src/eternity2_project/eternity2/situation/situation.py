@@ -20,5 +20,5 @@ class Situation:
         self.__placed_pieces.append(PlacedPiece(square, rotated_piece))
 
     def calculate_possibilities(self, square: Square) -> list[RotatedPiece]:
-        constraints: Constraints =ConstraintsCalculator(self.__placed_pieces, square).calculate()
+        constraints: Constraints = ConstraintsCalculator(self.__placed_pieces, square).calculate()
         return PieceSearcher(self.__placed_pieces, constraints).search()

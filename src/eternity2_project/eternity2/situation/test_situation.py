@@ -1,4 +1,4 @@
-from unittest import TestCase, skip
+from unittest import TestCase
 
 from src.eternity2_project.eternity2.game.board import Board
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
@@ -33,23 +33,44 @@ class TestSituation(TestCase):
         situation.place_piece(Board().get_square(0, 2), RotatedPiece(PieceSet().get_piece(1), Rotation.DEGREE_90))
         situation.place_piece(Board().get_square(0, 3), RotatedPiece(PieceSet().get_piece(2), Rotation.DEGREE_90))
         situation.place_piece(Board().get_square(0, 4), RotatedPiece(PieceSet().get_piece(3), Rotation.DEGREE_90))
-        corner_square = Board().get_square(0, 0)
+        up_left_corner_square = Board().get_up_left_corner()
 
         # Act
-        rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(corner_square)
+        rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(up_left_corner_square)
 
         # Assert
         self.assertEqual(len(rotated_pieces), 1)
         expected_rotated_piece_4: RotatedPiece = RotatedPiece(PieceSet().get_piece(4), Rotation.DEGREE_90)
         self.assertIn(expected_rotated_piece_4, rotated_pieces)
 
-    @skip('TODO: implement')
-    def test_calculate_possibilities_top_border(self):
+    def test_calculate_possibilities_top_border_no_placed(self):
         # Arrange
         situation: Situation = Situation([])
 
         # Act
-        rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(Board().get_square(0, 1))
+        rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(Board().get_square(1, 0))
 
         # Assert
         self.assertEqual(len(rotated_pieces), 60)
+
+    def test_calculate_possibilities_top_border_one_placed(self):
+        # Arrange
+        situation: Situation = Situation([])
+        situation.place_piece(Board().get_square(3, 0), RotatedPiece(PieceSet().get_piece(5), Rotation.DEGREE_180))
+
+        # Act
+        rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(Board().get_square(1, 0))
+
+        # Assert
+        self.assertEqual(len(rotated_pieces), 59)
+
+    def test_calculate_possibilities_top_border_one_placed_next_to(self):
+        # Arrange
+        situation: Situation = Situation([])
+        situation.place_piece(Board().get_square(2, 0), RotatedPiece(PieceSet().get_piece(5), Rotation.DEGREE_180))
+
+        # Act
+        rotated_pieces: list[RotatedPiece] = situation.calculate_possibilities(Board().get_square(1, 0))
+
+        # Assert
+        self.assertEqual(len(rotated_pieces), 9 + 2)
