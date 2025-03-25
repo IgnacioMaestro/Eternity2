@@ -1,11 +1,11 @@
 from typing import Optional
 
-from .color import Color
-from .constraints import Constraints
-from .css_color_code import CSSColorCode
-from .piece import Piece
-from .rotated_piece import RotatedPiece
-from .rotation import Rotation
+from src.eternity2_project.eternity2.piece.color import Color
+from src.eternity2_project.eternity2.piece.constraints import Constraints
+from src.eternity2_project.eternity2.piece.css_color_code import CSSColorCode
+from src.eternity2_project.eternity2.piece.piece import Piece
+from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
+from src.eternity2_project.eternity2.piece.rotation import Rotation
 from ..situation.placed_piece import PlacedPiece
 
 

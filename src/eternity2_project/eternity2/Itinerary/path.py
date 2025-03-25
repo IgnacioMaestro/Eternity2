@@ -3,7 +3,7 @@ from typing import Self
 from src.eternity2_project.eternity2.Itinerary.reference_path import ReferencePath
 from src.eternity2_project.eternity2.Itinerary.step import Step
 from src.eternity2_project.eternity2.game.square import Square
-from src.eternity2_project.eternity2.game.rotated_piece import RotatedPiece
+from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.situation.situation import Situation
 
 

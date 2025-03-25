@@ -5,8 +5,8 @@ from src.eternity2_project.eternity2.Itinerary.path import Path
 from src.eternity2_project.eternity2.Itinerary.step import Step
 from src.eternity2_project.eternity2.game.board import Board
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
-from src.eternity2_project.eternity2.game.rotated_piece import RotatedPiece
-from src.eternity2_project.eternity2.game.rotation import Rotation
+from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
+from src.eternity2_project.eternity2.piece.rotation import Rotation
 from src.eternity2_project.eternity2.situation.situation import Situation
 
 

@@ -1,10 +1,9 @@
-from tkinter import Place
 from unittest import TestCase
 
 from src.eternity2_project.eternity2.game.board import Board
-from src.eternity2_project.eternity2.game.constraints import Constraints
+from src.eternity2_project.eternity2.piece.constraints import Constraints
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
-from src.eternity2_project.eternity2.game.rotation import Rotation
+from src.eternity2_project.eternity2.piece.rotation import Rotation
 from src.eternity2_project.eternity2.situation.constraints_calculator import ConstraintsCalculator
 from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
 

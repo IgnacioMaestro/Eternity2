@@ -1,5 +1,5 @@
-from src.eternity2_project.eternity2.game.piece import Piece
-from src.eternity2_project.eternity2.game.rotation import Rotation
+from src.eternity2_project.eternity2.piece.piece import Piece
+from src.eternity2_project.eternity2.piece.rotation import Rotation
 
 
 class RotatedPiece:

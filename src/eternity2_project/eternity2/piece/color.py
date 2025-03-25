@@ -1,4 +1,4 @@
-from src.eternity2_project.eternity2.game.css_color_code import CSSColorCode
+from src.eternity2_project.eternity2.piece.css_color_code import CSSColorCode
 
 
 class Color:
