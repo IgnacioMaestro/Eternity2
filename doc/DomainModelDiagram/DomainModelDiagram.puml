@@ -11,6 +11,17 @@ package Piece{
         number: integer
     }
 
+    class Constraints {
+        up: Color
+        right: Color
+        down: Color
+        left: Color
+    }
+    Constraints "up" o-left-> Color
+    Constraints "down" o-left-> Color
+    Constraints "left" o-left-> Color
+    Constraints "right" o-left-> Color
+
     Color "main_color" *--> CSSColorCode
     Color "secondary_color" *--> CSSColorCode
     Piece "up" *--> Color
