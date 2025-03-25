@@ -1,14 +1,12 @@
 from typing import Self, Optional
 
-from src.eternity2_project.eternity2.piece.color import Color
-from src.eternity2_project.eternity2.piece.constraints import Constraints
-from src.eternity2_project.eternity2.piece.piece import Piece
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
 from src.eternity2_project.eternity2.game.square import Square
+from src.eternity2_project.eternity2.piece.color import Color
+from src.eternity2_project.eternity2.piece.constraints import Constraints
+from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.situation.piece_searcher import PieceSearcher
 from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
-from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
-from src.eternity2_project.eternity2.piece.rotation import Rotation
 
 
 class Situation:
@@ -19,8 +17,8 @@ class Situation:
     def create_from(cls, situation: Self) -> Self:
         return Situation(situation.__placed_pieces)
 
-    def place_piece(self, piece: Piece, square: Square, rotation: Rotation):
-        self.__placed_pieces.append(PlacedPiece(piece, square, rotation))
+    def place_piece(self, square: Square, rotated_piece: RotatedPiece):
+        self.__placed_pieces.append(PlacedPiece(square, rotated_piece))
 
     def calculate_possibilities(self, square: Square) -> list[RotatedPiece]:
         constraints: Constraints = self.__get_constraints(square)

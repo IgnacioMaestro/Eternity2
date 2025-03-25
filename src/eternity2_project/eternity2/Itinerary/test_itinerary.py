@@ -8,6 +8,7 @@ from src.eternity2_project.eternity2.game.piece_set import PieceSet
 from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
 from src.eternity2_project.eternity2.situation.situation import Situation
 from src.eternity2_project.eternity2.piece.rotation import Rotation
+from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
 
 
 class TestItinerary(TestCase):
@@ -34,7 +35,7 @@ class TestItinerary(TestCase):
         step_1_level_1 = Step(board.get_square(0, 0))
         step_2_level_1 = Step(board.get_square(1, 0))
         initial_situation_plus_one_piece = Situation(
-            [PlacedPiece(PieceSet().get_piece(1), board.get_square(7, 8), Rotation.DEGREE_180)])
+            [PlacedPiece(board.get_square(7, 8), RotatedPiece(PieceSet().get_piece(1), Rotation.DEGREE_180))])
         step_1_level_2 = Step(board.get_square(1, 0))
         step_2_level_2 = Step(board.get_square(2, 0))
         path_1_level_2 = Path(initial_situation_plus_one_piece, [step_1_level_2, step_2_level_2])

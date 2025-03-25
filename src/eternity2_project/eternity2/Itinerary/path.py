@@ -28,7 +28,7 @@ class Path(ReferencePath):
         rotated_pieces: list[RotatedPiece] = self.__situation.calculate_possibilities(square)
         for rotated_piece in rotated_pieces:
             situation = Situation.create_from(self.__situation)
-            situation.place_piece(rotated_piece.get_piece(), square, rotated_piece.get_rotation())
+            situation.place_piece(square, rotated_piece)
             path = Path(situation, self.__steps[1:])
             self.get_first_step().add_path(path)
 

@@ -30,9 +30,9 @@ class TestSituation(TestCase):
     def test_calculate_possibilities_corner_placed_3_corners_placed_no_near(self):
         # Arrange
         situation: Situation = Situation([])
-        situation.place_piece(PieceSet().get_piece(1), Board().get_square(0, 2), Rotation.DEGREE_90)
-        situation.place_piece(PieceSet().get_piece(2), Board().get_square(0, 3), Rotation.DEGREE_90)
-        situation.place_piece(PieceSet().get_piece(3), Board().get_square(0, 4), Rotation.DEGREE_90)
+        situation.place_piece(Board().get_square(0, 2), RotatedPiece(PieceSet().get_piece(1), Rotation.DEGREE_90))
+        situation.place_piece(Board().get_square(0, 3), RotatedPiece(PieceSet().get_piece(2), Rotation.DEGREE_90))
+        situation.place_piece(Board().get_square(0, 4), RotatedPiece(PieceSet().get_piece(3), Rotation.DEGREE_90))
         corner_square = Board().get_square(0, 0)
 
         # Act
@@ -53,5 +53,3 @@ class TestSituation(TestCase):
 
         # Assert
         self.assertEqual(len(rotated_pieces), 60)
-
-

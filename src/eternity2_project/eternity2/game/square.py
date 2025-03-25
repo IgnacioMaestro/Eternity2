@@ -14,16 +14,16 @@ class Square:
         return is_top_left_corner or is_top_right_corner or is_bottom_left_corner or is_bottom_right_corner
 
     def is_up_to(self, square: Self) -> bool:
-        return self.__row + 1 == square.__row and self.__column == square.__column
+        return self.__row == square.__row and self.__column == square.__column  + 1
 
     def is_right_to(self, square: Self) -> bool:
-        return self.__row == square.__row and self.__column + 1 == square.__column
+        return self.__row == square.__row + 1 and self.__column == square.__column
 
     def is_down_to(self, square: Self) -> bool:
-        return self.__row - 1 == square.__row and self.__column == square.__column
+        return self.__row == square.__row and self.__column == square.__column - 1
 
     def is_left_to(self, square: Self) -> bool:
-        return self.__row == square.__row and self.__column - 1 == square.__column
+        return self.__row == square.__row  - 1 and self.__column == square.__column
 
     def is_top(self) -> bool:
         return self.__row == 0
