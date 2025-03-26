@@ -3,10 +3,6 @@ from typing import Self
 from src.eternity2_project.eternity2.Itinerary.path import Path
 from src.eternity2_project.eternity2.Itinerary.step import Step
 from src.eternity2_project.eternity2.game.board import Board
-from src.eternity2_project.eternity2.game.piece_set import PieceSet
-from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
-from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
-from src.eternity2_project.eternity2.piece.rotation import Rotation
 from src.eternity2_project.eternity2.situation.situation import Situation
 
 
@@ -17,13 +13,8 @@ class Itinerary:
 
     @classmethod
     def create_with_first_5_pieces(cls) -> Self:
+        situation = Situation.create_initial_situation()
         board = Board()
-        situation = Situation(
-            [PlacedPiece(board.get_square(7, 8), RotatedPiece(PieceSet().get_piece(139), Rotation.DEGREE_180)),
-             PlacedPiece(board.get_square(2, 2), RotatedPiece(PieceSet().get_piece(208), Rotation.DEGREE_270)),
-             PlacedPiece(board.get_square(13, 2), RotatedPiece(PieceSet().get_piece(255), Rotation.DEGREE_270)),
-             PlacedPiece(board.get_square(2, 13), RotatedPiece(PieceSet().get_piece(181), Rotation.DEGREE_270)),
-             PlacedPiece(board.get_square(13, 13), RotatedPiece(PieceSet().get_piece(249), Rotation.DEGREE_0))])
         steps: list[Step] = [
             Step(board.get_square(0, 0)),
             Step(board.get_square(1, 0)),
