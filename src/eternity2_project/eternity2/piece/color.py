@@ -15,5 +15,8 @@ class Color:
     def __str__(self) -> str:
         return self.__name
 
+    def __eq__(self, other):
+        return self.__id == other.__id
+
     def is_edge(self):
         return self.__id == Color.EDGE_ID
