@@ -569,7 +569,20 @@ class PieceSet:
                   PieceSet.YELLOW_GREEN_SQUARE, PieceSet.BLUE_PINK_SPADE),
             Piece(249, PieceSet.BLUE_PINK_SPADE, PieceSet.PINK_YELLOW_CASTLE,
                   PieceSet.YELLOW_GREEN_SQUARE, PieceSet.YELLOW_DARK_BLUE_CASTLE),
-
+            Piece(250, PieceSet.DARK_BLUE_BLUE_SQUARE, PieceSet.PINK_YELLOW_CASTLE,
+                  PieceSet.YELLOW_GREEN_SQUARE, PieceSet.ORANGE_PURPLE_STAR),
+            Piece(251, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS,
+                  PieceSet.BLUE_PINK_SPADE, PieceSet.BLUE_PINK_SPADE),
+            Piece(252, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS, PieceSet.YELLOW_DARK_BLUE_CASTLE,
+                  PieceSet.BLUE_PINK_SPADE, PieceSet.YELLOW_DARK_BLUE_CASTLE),
+            Piece(253, PieceSet.DARK_BLUE_BLUE_SQUARE, PieceSet.ORANGE_PURPLE_STAR,
+                  PieceSet.YELLOW_DARK_BLUE_CASTLE, PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS),
+            Piece(254, PieceSet.PINK_YELLOW_CASTLE, PieceSet.DARK_BLUE_BLUE_SQUARE,
+                  PieceSet.ORANGE_PURPLE_STAR, PieceSet.DARK_BLUE_BLUE_SQUARE),
+            Piece(255, PieceSet.DARK_BLUE_BLUE_SQUARE, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE,
+                  PieceSet.ORANGE_PURPLE_STAR, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE),
+            Piece(256, PieceSet.PINK_YELLOW_CASTLE, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE,
+                  PieceSet.DARK_BLUE_ORANGE_DOTTED_CROSS, PieceSet.DARK_BLUE_PINK_CROSS_IN_CIRCLE)
         ]
         self.__piece_list = []
         self.__piece_list.extend(pieces_1_16)
@@ -587,6 +600,7 @@ class PieceSet:
         self.__piece_list.extend(pieces_193_208)
         self.__piece_list.extend(pieces_209_224)
         self.__piece_list.extend(pieces_225_240)
+        self.__piece_list.extend(pieces_241_256)
 
     def get_piece(self, piece_number: int) -> Piece:
         return self.__piece_list[piece_number - 1]
