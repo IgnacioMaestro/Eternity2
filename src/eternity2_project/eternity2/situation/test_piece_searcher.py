@@ -26,7 +26,7 @@ class TestPieceSearcher(TestCase):
         rotated_pieces: list[RotatedPiece] = PieceSearcher([], constraints).search()
 
         # Assert
-        self.assertEqual(len(rotated_pieces), 240 - 60)
+        self.assertEqual(len(rotated_pieces), 256 - 60)
 
     def test_search_one_constraints_edge(self):
         # Arrange
@@ -67,7 +67,7 @@ class TestPieceSearcher(TestCase):
         rotated_pieces: list[RotatedPiece] = PieceSearcher([self.placed_piece], constraints).search()
 
         # Assert
-        self.assertEqual(len(rotated_pieces), 240 - 60 - 1)
+        self.assertEqual(len(rotated_pieces), 256 - 60 - 1)
 
     def test_search_one_constraints_edge_one_placed_pieces_no_edge(self):
         # Arrange
