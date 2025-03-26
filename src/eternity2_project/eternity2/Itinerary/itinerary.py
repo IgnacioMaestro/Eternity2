@@ -20,8 +20,10 @@ class Itinerary:
         board = Board()
         situation = Situation(
             [PlacedPiece(board.get_square(7, 8), RotatedPiece(PieceSet().get_piece(139), Rotation.DEGREE_180)),
-             PlacedPiece(board.get_square(2, 2), RotatedPiece(PieceSet().get_piece(208), Rotation.DEGREE_270))])
-        # TODO: add another 4 pieces
+             PlacedPiece(board.get_square(2, 2), RotatedPiece(PieceSet().get_piece(208), Rotation.DEGREE_270)),
+             PlacedPiece(board.get_square(13, 2), RotatedPiece(PieceSet().get_piece(255), Rotation.DEGREE_270)),
+             PlacedPiece(board.get_square(2, 13), RotatedPiece(PieceSet().get_piece(181), Rotation.DEGREE_270)),
+             PlacedPiece(board.get_square(13, 13), RotatedPiece(PieceSet().get_piece(249), Rotation.DEGREE_0))])
         steps: list[Step] = [
             Step(board.get_square(0, 0)),
             Step(board.get_square(1, 0)),
