@@ -15,6 +15,18 @@ class Situation:
     def __init__(self, placed_pieces: list[PlacedPiece]):
         self.__placed_pieces: list[PlacedPiece] = placed_pieces
 
+    def __str__(self) -> str:
+        return str(len(self.__placed_pieces))
+
+    def __eq__(self, other):
+        is_equal_placed_pieces_num = len(self.__placed_pieces) == len(other.__placed_pieces)
+        if not is_equal_placed_pieces_num:
+            return False
+        for index, placed_piece in enumerate(self.__placed_pieces):
+            if placed_piece == other.__placed_pieces[index]:
+                return False
+        return True
+
     @classmethod
     def create_initial_situation(cls) -> Self:
         board = Board()
@@ -28,7 +40,7 @@ class Situation:
 
     @classmethod
     def create_from(cls, situation: Self) -> Self:
-        return Situation(situation.__placed_pieces)
+        return Situation(situation.__placed_pieces.copy())
 
     def place_piece(self, square: Square, rotated_piece: RotatedPiece):
         self.__placed_pieces.append(PlacedPiece(square, rotated_piece))

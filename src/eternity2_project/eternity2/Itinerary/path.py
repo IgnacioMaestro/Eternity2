@@ -12,6 +12,10 @@ class Path(ReferencePath):
         self.__situation: Situation = situation
         self.__steps: list[Step] = steps
 
+    def __str__(self) -> str:
+        return "Placed pieces: " + str(self.__situation) + ", Steps: " + str(len(self.__steps))
+
+
     def get_first_step(self) -> Step:
         return self.__steps[0]
 
@@ -27,8 +31,12 @@ class Path(ReferencePath):
         square: Square = self.get_first_step().get_square()
         rotated_pieces: list[RotatedPiece] = self.__situation.calculate_possibilities(square)
         for rotated_piece in rotated_pieces:
-            situation = Situation.create_from(self.__situation)
-            situation.place_piece(square, rotated_piece)
-            path = Path(situation, self.__steps[1:])
+            path = self.create_new_path(rotated_piece, square)
             self.get_first_step().add_path(path)
+
+    def create_new_path(self, rotated_piece, square):
+        situation = Situation.create_from(self.__situation)
+        situation.place_piece(square, rotated_piece)
+        path = Path(situation, self.__steps[1:])
+        return path
 

@@ -7,6 +7,7 @@ from src.eternity2_project.eternity2.game.board import Board
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
 from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.piece.rotation import Rotation
+from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
 from src.eternity2_project.eternity2.situation.situation import Situation
 
 
@@ -26,3 +27,6 @@ class TestPath(TestCase):
         # Assert
         self.assertEqual(step.count_paths(), 4)
         self.assertTrue(step.is_calculated_possibilities())
+        deepest_path = path.obtain_deepest_path()
+        expected_situation = Situation([PlacedPiece(board.get_square(0, 0), rotated_piece)])
+        self.assertEqual(deepest_path.get_situation(), expected_situation)
