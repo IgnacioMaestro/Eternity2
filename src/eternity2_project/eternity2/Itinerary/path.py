@@ -15,6 +15,13 @@ class Path(ReferencePath):
     def __str__(self) -> str:
         return "Placed pieces: " + str(self.__situation) + ", Steps: " + str(len(self.__steps))
 
+    def print(self):
+        print('Placed pieces:')
+        self.__situation.print()
+        print('Steps:')
+        for step in self.__steps:
+            print(str(step))
+
     def get_first_step(self) -> Step:
         return self.__steps[0]
 

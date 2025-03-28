@@ -24,3 +24,7 @@ class Itinerary:
 
     def obtain_deepest_path(self) -> Path:
         return self.__path.obtain_deepest_path()
+
+    def print(self) -> None:
+        print(self.__name)
+        self.__path.print()

@@ -27,6 +27,10 @@ class Situation:
                 return False
         return True
 
+    def print(self):
+        for placed_piece in self.__placed_pieces:
+            print(str(placed_piece))
+
     @classmethod
     def create_initial_situation(cls) -> Self:
         board = Board()

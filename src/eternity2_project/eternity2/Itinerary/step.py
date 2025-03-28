@@ -7,6 +7,9 @@ class Step:
         self.__square: Square = square
         self.__generated_paths: list[ReferencePath] = []
 
+    def __str__(self):
+        return str(self.__square)
+
     def add_path(self, path: ReferencePath):
         self.__generated_paths.append(path)
 
