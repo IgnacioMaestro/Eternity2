@@ -15,7 +15,6 @@ class Path(ReferencePath):
     def __str__(self) -> str:
         return "Placed pieces: " + str(self.__situation) + ", Steps: " + str(len(self.__steps))
 
-
     def get_first_step(self) -> Step:
         return self.__steps[0]
 
@@ -39,4 +38,3 @@ class Path(ReferencePath):
         situation.place_piece(square, rotated_piece)
         path = Path(situation, self.__steps[1:])
         return path
-
