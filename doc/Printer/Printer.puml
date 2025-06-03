@@ -1,0 +1,8 @@
+@startuml
+package Printer{
+    class LinePrinter
+    class SituationPrinter
+
+    SituationPrinter *--> "16" LinePrinter
+}
+@enduml
