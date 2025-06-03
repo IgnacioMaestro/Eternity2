@@ -6,7 +6,7 @@ package Situation {
   Admin --> (Print Situation)
 }
 
-package Way {
+package Itinerary {
   Admin --> (Create Itinerary)
 }
 @enduml
