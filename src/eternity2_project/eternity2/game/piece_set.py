@@ -3,7 +3,7 @@ from typing import Optional
 from src.eternity2_project.eternity2.css_color.css_color import CSSColor
 from src.eternity2_project.eternity2.game.color import Color
 from src.eternity2_project.eternity2.game.constraints import Constraints
-from ..rotated_piece.piece import Piece
+from src.eternity2_project.eternity2.game.piece import Piece
 from ..rotated_piece.rotated_piece import RotatedPiece
 from ..rotated_piece.rotation import Rotation
 from ..situation.placed_piece import PlacedPiece
