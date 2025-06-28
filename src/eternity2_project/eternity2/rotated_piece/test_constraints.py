@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
-from src.eternity2_project.eternity2.piece.constraints import Constraints
+from src.eternity2_project.eternity2.rotated_piece.constraints import Constraints
 
 
 class TestConstraints(TestCase):

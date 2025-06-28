@@ -3,9 +3,9 @@ from typing import Self
 from src.eternity2_project.eternity2.game.board import Board
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
 from src.eternity2_project.eternity2.game.square import Square
-from src.eternity2_project.eternity2.piece.constraints import Constraints
-from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
-from src.eternity2_project.eternity2.piece.rotation import Rotation
+from src.eternity2_project.eternity2.rotated_piece.constraints import Constraints
+from src.eternity2_project.eternity2.rotated_piece.rotated_piece import RotatedPiece
+from src.eternity2_project.eternity2.rotated_piece.rotation import Rotation
 from src.eternity2_project.eternity2.situation.constraints_calculator import ConstraintsCalculator
 from src.eternity2_project.eternity2.situation.piece_searcher import PieceSearcher
 from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece

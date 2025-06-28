@@ -1,5 +1,6 @@
 from typing import Optional, List, Self
-from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
+
+from src.eternity2_project.eternity2.rotated_piece.rotated_piece import RotatedPiece
 
 
 class LinePrinter:

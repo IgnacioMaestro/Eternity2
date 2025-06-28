@@ -1,7 +1,7 @@
 from typing import List, Optional, Self, Final
 
-from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.printer.line_printer import LinePrinter
+from src.eternity2_project.eternity2.rotated_piece.rotated_piece import RotatedPiece
 
 
 class SituationPrinter:

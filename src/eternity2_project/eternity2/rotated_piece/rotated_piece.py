@@ -1,6 +1,6 @@
-from src.eternity2_project.eternity2.piece.color import Color
-from src.eternity2_project.eternity2.piece.piece import Piece
-from src.eternity2_project.eternity2.piece.rotation import Rotation
+from src.eternity2_project.eternity2.rotated_piece.color import Color
+from src.eternity2_project.eternity2.rotated_piece.piece import Piece
+from src.eternity2_project.eternity2.rotated_piece.rotation import Rotation
 
 
 class RotatedPiece:

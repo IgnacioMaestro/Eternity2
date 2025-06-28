@@ -1,10 +1,10 @@
 from typing import Optional
 from unittest import TestCase
 
-from src.eternity2_project.eternity2.piece.constraints import Constraints
-from src.eternity2_project.eternity2.piece.piece import Piece
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
-from src.eternity2_project.eternity2.piece.rotation import Rotation
+from src.eternity2_project.eternity2.rotated_piece.constraints import Constraints
+from src.eternity2_project.eternity2.rotated_piece.piece import Piece
+from src.eternity2_project.eternity2.rotated_piece.rotation import Rotation
 
 
 class TestPiece(TestCase):

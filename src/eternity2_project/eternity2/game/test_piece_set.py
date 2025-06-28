@@ -2,12 +2,12 @@ from typing import Optional
 from unittest import TestCase
 
 from src.eternity2_project.eternity2.game.board import Board
-from src.eternity2_project.eternity2.piece.color import Color
-from src.eternity2_project.eternity2.piece.piece import Piece
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
-from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
+from src.eternity2_project.eternity2.rotated_piece.color import Color
+from src.eternity2_project.eternity2.rotated_piece.piece import Piece
+from src.eternity2_project.eternity2.rotated_piece.rotated_piece import RotatedPiece
+from src.eternity2_project.eternity2.rotated_piece.rotation import Rotation
 from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
-from src.eternity2_project.eternity2.piece.rotation import Rotation
 
 
 class TestPieceSet(TestCase):

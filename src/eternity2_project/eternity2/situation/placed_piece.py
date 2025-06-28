@@ -1,7 +1,7 @@
 from src.eternity2_project.eternity2.game.square import Square
-from src.eternity2_project.eternity2.piece.color import Color
-from src.eternity2_project.eternity2.piece.piece import Piece
-from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
+from src.eternity2_project.eternity2.rotated_piece.color import Color
+from src.eternity2_project.eternity2.rotated_piece.piece import Piece
+from src.eternity2_project.eternity2.rotated_piece.rotated_piece import RotatedPiece
 
 
 class PlacedPiece:
