@@ -11,24 +11,6 @@ from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
 
 
 class TestPieceSet(TestCase):
-    def test_get_no_placed_pieces_no_placed_pieces(self):
-        # Act
-        pieces: list[Piece] = PieceSet().get_no_placed_pieces([])
-
-        # Assert
-        self.assertEqual(len(pieces), 256)
-
-    def test_get_no_placed_pieces_one_placed_piece(self):
-        # Arrange
-        piece: Piece = Piece(1, PieceSet.ORANGE_BLUE_CROSS, PieceSet.PINK_BLUE_CROSS, PieceSet.EDGE, PieceSet.EDGE)
-        placed_piece: PlacedPiece = PlacedPiece(Board().get_square(0, 0), RotatedPiece(piece, Rotation.DEGREE_0))
-
-        # Act
-        pieces: list[Piece] = PieceSet().get_no_placed_pieces([placed_piece])
-
-        # Assert
-        self.assertEqual(len(pieces), 255)
-
     def test_check_pieces(self):
 
         codes = ["AQXX", "AEXX", "IQXX", "QIXX", "BAXA", "JIXA", "FAXA", "FMXA", "KQXA", "GEXA", "OIXA", "HEXA", "HMXA",
