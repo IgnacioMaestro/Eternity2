@@ -2,7 +2,7 @@ from typing import Optional
 
 from src.eternity2_project.eternity2.piece.color import Color
 from src.eternity2_project.eternity2.piece.constraints import Constraints
-from src.eternity2_project.eternity2.piece.css_color_code import CSSColorCode
+from src.eternity2_project.eternity2.css_color.css_color import CSSColor
 from src.eternity2_project.eternity2.piece.piece import Piece
 from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.piece.rotation import Rotation
@@ -10,31 +10,31 @@ from ..situation.placed_piece import PlacedPiece
 
 
 class PieceSet:
-    EDGE = Color(Color.EDGE_ID, CSSColorCode('808080'), CSSColorCode('808080'), "Edge")
-    ORANGE_BLUE_CROSS = Color(2, CSSColorCode('FFA500'), CSSColorCode('0000FF'), "OrangeBlueCross")
-    PINK_BLUE_CROSS = Color(3, CSSColorCode('FFC0CB'), CSSColorCode('0000FF'), "PinkBlueCross")
-    GREEN_DARK_BLUE_HEXAGON = Color(4, CSSColorCode('00FF00'), CSSColorCode('00008B'), "GreenDarkBlueHexagon")
-    DARK_BLUE_YELLOW_FLOWER = Color(5, CSSColorCode('00008B'), CSSColorCode('FFFF00'), "DarkBlueYellowFlower")
-    PINK_YELLOW_DOTTED_CROSS = Color(6, CSSColorCode('FFC0CB'), CSSColorCode('FFFF00'), "PinkYellowDottedCross")
-    PURPLE_BLUE_SPADE = Color(7, CSSColorCode('800080'), CSSColorCode('0000FF'), "PurpleBlueSpade")
-    PURPLE_YELLOW_CROSS_IN_CIRCLE = Color(8, CSSColorCode('800080'), CSSColorCode('FFFF00'), "PurpleYellowCrossCircle")
-    BROWN_ORANGE = Color(9, CSSColorCode('A52A2A'), CSSColorCode('FFA500'), "BrownOrange")
-    GREEN_ORANGE_SPADE = Color(10, CSSColorCode('00FF00'), CSSColorCode('FFA500'), "GreenOrangeSpade")
-    BLUE_PINK_CASTLE = Color(11, CSSColorCode('0000FF'), CSSColorCode('FFC0CB'), "BluePinkCastle")
-    YELLOW_GREEN_SQUARE = Color(12, CSSColorCode('FFFF00'), CSSColorCode('00FF00'), "YellowGreenSquare")
+    EDGE = Color(Color.EDGE_ID, CSSColor('808080'), CSSColor('808080'), "Edge")
+    ORANGE_BLUE_CROSS = Color(2, CSSColor('FFA500'), CSSColor('0000FF'), "OrangeBlueCross")
+    PINK_BLUE_CROSS = Color(3, CSSColor('FFC0CB'), CSSColor('0000FF'), "PinkBlueCross")
+    GREEN_DARK_BLUE_HEXAGON = Color(4, CSSColor('00FF00'), CSSColor('00008B'), "GreenDarkBlueHexagon")
+    DARK_BLUE_YELLOW_FLOWER = Color(5, CSSColor('00008B'), CSSColor('FFFF00'), "DarkBlueYellowFlower")
+    PINK_YELLOW_DOTTED_CROSS = Color(6, CSSColor('FFC0CB'), CSSColor('FFFF00'), "PinkYellowDottedCross")
+    PURPLE_BLUE_SPADE = Color(7, CSSColor('800080'), CSSColor('0000FF'), "PurpleBlueSpade")
+    PURPLE_YELLOW_CROSS_IN_CIRCLE = Color(8, CSSColor('800080'), CSSColor('FFFF00'), "PurpleYellowCrossCircle")
+    BROWN_ORANGE = Color(9, CSSColor('A52A2A'), CSSColor('FFA500'), "BrownOrange")
+    GREEN_ORANGE_SPADE = Color(10, CSSColor('00FF00'), CSSColor('FFA500'), "GreenOrangeSpade")
+    BLUE_PINK_CASTLE = Color(11, CSSColor('0000FF'), CSSColor('FFC0CB'), "BluePinkCastle")
+    YELLOW_GREEN_SQUARE = Color(12, CSSColor('FFFF00'), CSSColor('00FF00'), "YellowGreenSquare")
     DARK_BLUE_ORANGE_DOTTED_CROSS = Color(
-        13, CSSColorCode('00008B'), CSSColorCode('FFA500'), "DarkBlueOrangeCrossCircle")
-    PINK_YELLOW_CASTLE = Color(14, CSSColorCode('FFC0CB'), CSSColorCode('FFFF00'), "PinkYellowCastle")
-    YELLOW_BLUE_STAR = Color(15, CSSColorCode('FFFF00'), CSSColorCode('0000FF'), "YellowBlueStar")
-    GREEN_PINK_DOTTED_CROSS = Color(16, CSSColorCode('00FF00'), CSSColorCode('FFC0CB'), "GreenPinkDottedCross")
-    MAROON_YELLOW_STAR = Color(17, CSSColorCode('800000'), CSSColorCode('FFFF00'), "MaroonYellowStar")
-    BLUE_PINK_SPADE = Color(18, CSSColorCode('0000FF'), CSSColorCode('FFC0CB'), "BluePinkSpade")
-    YELLOW_DARK_BLUE_CASTLE = Color(19, CSSColorCode('FFFF00'), CSSColorCode('00008B'), "YellowDarkBlueCastle")
-    ORANGE_PURPLE_STAR = Color(20, CSSColorCode('FFA500'), CSSColorCode('800080'), "OrangePurpleStar")
-    DARK_BLUE_BLUE_SQUARE = Color(21, CSSColorCode('00008B'), CSSColorCode('0000FF'), "DarkBlueBlueSquare")
+        13, CSSColor('00008B'), CSSColor('FFA500'), "DarkBlueOrangeCrossCircle")
+    PINK_YELLOW_CASTLE = Color(14, CSSColor('FFC0CB'), CSSColor('FFFF00'), "PinkYellowCastle")
+    YELLOW_BLUE_STAR = Color(15, CSSColor('FFFF00'), CSSColor('0000FF'), "YellowBlueStar")
+    GREEN_PINK_DOTTED_CROSS = Color(16, CSSColor('00FF00'), CSSColor('FFC0CB'), "GreenPinkDottedCross")
+    MAROON_YELLOW_STAR = Color(17, CSSColor('800000'), CSSColor('FFFF00'), "MaroonYellowStar")
+    BLUE_PINK_SPADE = Color(18, CSSColor('0000FF'), CSSColor('FFC0CB'), "BluePinkSpade")
+    YELLOW_DARK_BLUE_CASTLE = Color(19, CSSColor('FFFF00'), CSSColor('00008B'), "YellowDarkBlueCastle")
+    ORANGE_PURPLE_STAR = Color(20, CSSColor('FFA500'), CSSColor('800080'), "OrangePurpleStar")
+    DARK_BLUE_BLUE_SQUARE = Color(21, CSSColor('00008B'), CSSColor('0000FF'), "DarkBlueBlueSquare")
     DARK_BLUE_PINK_CROSS_IN_CIRCLE = Color(
-        22, CSSColorCode('00008B'), CSSColorCode('FFC0CB'), "DarkBluePinkCrossCircle")
-    MAROON_GREEN_CROSS_IN_CIRCLE = Color(23, CSSColorCode('800000'), CSSColorCode('00FF00'), "MaroonGreenCrossCircle")
+        22, CSSColor('00008B'), CSSColor('FFC0CB'), "DarkBluePinkCrossCircle")
+    MAROON_GREEN_CROSS_IN_CIRCLE = Color(23, CSSColor('800000'), CSSColor('00FF00'), "MaroonGreenCrossCircle")
     __piece_list: list[Piece]
 
     def __init__(self):

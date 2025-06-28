@@ -2,7 +2,7 @@ from unittest import TestCase
 from typing import List, Optional
 
 from src.eternity2_project.eternity2.piece.color import Color
-from src.eternity2_project.eternity2.piece.css_color_code import CSSColorCode
+from src.eternity2_project.eternity2.css_color.css_color import CSSColor
 from src.eternity2_project.eternity2.piece.piece import Piece
 from src.eternity2_project.eternity2.piece.rotation import Rotation
 from src.eternity2_project.eternity2.piece.rotated_piece import RotatedPiece
@@ -15,9 +15,9 @@ class TestLinePrinter(TestCase):
         self.maxDiff = None
 
         # Create some colors for testing
-        self.edge_color = Color(1, CSSColorCode("#000000"), CSSColorCode("#FFFFFF"), "Edge")
-        self.color1 = Color(2, CSSColorCode("#FF0000"), CSSColorCode("#00FF00"), "Color1")
-        self.color2 = Color(3, CSSColorCode("#0000FF"), CSSColorCode("#FFFF00"), "Color2")
+        self.edge_color = Color(1, CSSColor("#000000"), CSSColor("#FFFFFF"), "Edge")
+        self.color1 = Color(2, CSSColor("#FF0000"), CSSColor("#00FF00"), "Color1")
+        self.color2 = Color(3, CSSColor("#0000FF"), CSSColor("#FFFF00"), "Color2")
 
         # Create some pieces for testing
         self.piece1 = Piece(1, self.edge_color, self.color1, self.color2, self.edge_color)
