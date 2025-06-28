@@ -6,7 +6,6 @@ from src.eternity2_project.eternity2.game.constraints import Constraints
 from src.eternity2_project.eternity2.game.piece import Piece
 from ..rotated_piece.rotated_piece import RotatedPiece
 from ..rotated_piece.rotation import Rotation
-from ..situation.placed_piece import PlacedPiece
 
 
 class PieceSet:
