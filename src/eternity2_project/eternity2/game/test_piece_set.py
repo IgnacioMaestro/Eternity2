@@ -3,7 +3,7 @@ from unittest import TestCase
 
 from src.eternity2_project.eternity2.game.board import Board
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
-from src.eternity2_project.eternity2.rotated_piece.color import Color
+from src.eternity2_project.eternity2.game.color import Color
 from src.eternity2_project.eternity2.rotated_piece.piece import Piece
 from src.eternity2_project.eternity2.rotated_piece.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.rotated_piece.rotation import Rotation

@@ -2,7 +2,7 @@ from typing import Optional
 from unittest import TestCase
 
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
-from src.eternity2_project.eternity2.rotated_piece.constraints import Constraints
+from src.eternity2_project.eternity2.game.constraints import Constraints
 from src.eternity2_project.eternity2.rotated_piece.piece import Piece
 from src.eternity2_project.eternity2.rotated_piece.rotation import Rotation
 

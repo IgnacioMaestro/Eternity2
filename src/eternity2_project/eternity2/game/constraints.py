@@ -1,6 +1,6 @@
 from typing import Optional
 
-from src.eternity2_project.eternity2.rotated_piece.color import Color
+from src.eternity2_project.eternity2.game.color import Color
 
 
 class Constraints:

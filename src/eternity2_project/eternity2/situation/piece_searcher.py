@@ -1,5 +1,5 @@
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
-from src.eternity2_project.eternity2.rotated_piece.constraints import Constraints
+from src.eternity2_project.eternity2.game.constraints import Constraints
 from src.eternity2_project.eternity2.rotated_piece.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
 

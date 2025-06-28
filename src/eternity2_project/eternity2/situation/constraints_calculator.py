@@ -2,8 +2,8 @@ from typing import Optional
 
 from src.eternity2_project.eternity2.game.piece_set import PieceSet
 from src.eternity2_project.eternity2.game.square import Square
-from src.eternity2_project.eternity2.rotated_piece.color import Color
-from src.eternity2_project.eternity2.rotated_piece.constraints import Constraints
+from src.eternity2_project.eternity2.game.color import Color
+from src.eternity2_project.eternity2.game.constraints import Constraints
 from src.eternity2_project.eternity2.situation.placed_piece import PlacedPiece
 
 

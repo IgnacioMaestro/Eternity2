@@ -3,7 +3,7 @@ from typing import List, Optional
 
 from src.eternity2_project.eternity2.css_color.css_color import CSSColor
 from src.eternity2_project.eternity2.printer.situation_printer import SituationPrinter
-from src.eternity2_project.eternity2.rotated_piece.color import Color
+from src.eternity2_project.eternity2.game.color import Color
 from src.eternity2_project.eternity2.rotated_piece.piece import Piece
 from src.eternity2_project.eternity2.rotated_piece.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.rotated_piece.rotation import Rotation
