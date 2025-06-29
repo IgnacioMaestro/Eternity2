@@ -1,0 +1,69 @@
+@startuml ItineraryObjectDiagram
+
+' Example of Itinerary with 2 steps with generation
+
+' Define objects
+object "itinerary:Itinerary" as itinerary {
+  name = "Itinerary with first step generated"
+}
+
+object "path:Path" as path {
+}
+
+object "situation:Situation" as situation {
+  placedPieces = []
+}
+
+object "step1: Step" as step1 {
+}
+
+object "step2: Step" as step2 {
+  generatedPaths = []
+}
+
+object "square1: Square" as square1 {
+  row = 0
+  column = 0
+}
+
+object "square2: Square" as square2 {
+  row = 0
+  column = 1
+}
+
+object "possibility_1_path: Path" as possibility1Path {
+}
+
+object "possibility_2_path: Path" as possibility2Path {
+}
+
+object "possibility_1_situation: Situation" as possibility1Situation {
+  placedPieces = [placedPiece]
+}
+
+object "possibility_2_situation: Situation" as possibility2Situation {
+  placedPieces = [placedPiece]
+}
+
+object "possibility_1_placedPiece: PlacedPiece" as possibility1PlacedPiece {
+}
+
+object "possibility_2_placedPiece: PlacedPiece" as possibility2PlacedPiece {
+}
+
+' Define relationships
+itinerary *-- path : path
+path *-- situation : situation
+path o-- step1 : steps[0]
+path o-- step2 : steps[1]
+step1 *-- square1 : square
+step2 *-- square2 : square
+step1 o-- possibility1Path : generatedPaths[0]
+step1 o-- possibility2Path : generatedPaths[1]
+possibility1Path *-- possibility1Situation : situation
+possibility2Path *-- possibility2Situation : situation
+possibility1Situation *-- possibility1PlacedPiece : placedPieces[0]
+possibility2Situation *-- possibility2PlacedPiece : placedPieces[0]
+possibility1PlacedPiece *-- square1 : square
+possibility2PlacedPiece *-- square1 : square
+@enduml

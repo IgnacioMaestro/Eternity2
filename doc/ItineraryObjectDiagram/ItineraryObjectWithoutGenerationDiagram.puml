@@ -1,0 +1,43 @@
+@startuml ItineraryObjectDiagram
+
+' Example of Itinerary with 2 steps without generation
+
+' Define objects
+object "itinerary:Itinerary" as itinerary {
+  name = "Itinerary without generation"
+}
+
+object "path:Path" as path {
+}
+
+object "situation:Situation" as situation {
+  placedPieces = []
+}
+
+object "step1:Step" as step1 {
+  generatedPaths = []
+}
+
+object "step2:Step" as step2 {
+  generatedPaths = []
+}
+
+object "square1:Square" as square1 {
+  row = 0
+  column = 0
+}
+
+object "square2:Square" as square2 {
+  row = 0
+  column = 1
+}
+
+itinerary *-- path : path
+path *-- situation : situation
+path o-- step1 : steps[0]
+path o-- step2 : steps[1]
+step1 *-- square1 : square
+step2 *-- square2 : square
+
+
+@enduml
