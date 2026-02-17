@@ -61,9 +61,7 @@ package Itinerary {
         name: string
     }
     class Path
-    class Step {
-        order: integer
-    }
+    class Step
     Path *--> Step : "next"
     Path *--> "0.N" Step : "rest"
     Itinerary *--> Path
