@@ -16,7 +16,10 @@ class Situation:
         self.__placed_pieces: list[PlacedPiece] = placed_pieces
 
     def __str__(self) -> str:
-        return str(len(self.__placed_pieces))
+        situation_str = ''
+        for placed_piece in self.__placed_pieces:
+            situation_str += str(placed_piece) + '\n'
+        return situation_str
 
     def __eq__(self, other):
         is_equal_placed_pieces_num = len(self.__placed_pieces) == len(other.__placed_pieces)
