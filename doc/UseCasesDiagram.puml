@@ -8,5 +8,7 @@ package Situation {
 
 package Itinerary {
   Admin --> (Create Itinerary)
+  Admin --> (Print Itinerary)
+  Admin --> (Step deep in Itinerary)
 }
 @enduml
