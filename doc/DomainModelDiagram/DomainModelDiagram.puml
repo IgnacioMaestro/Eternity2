@@ -64,10 +64,10 @@ package Itinerary {
     class Step {
         order: integer
     }
-
-    Path *--> "1.N" Step
+    Path *--> Step : "next"
+    Path *--> "0.N" Step : "rest"
     Itinerary *--> Path
-    Step *--> "0.N" Path : "generated ones"
+    Step *--> "0.N" Path : "possibilities"
 }
 
 Path *--> Situation.Situation

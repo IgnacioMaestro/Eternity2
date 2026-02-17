@@ -9,6 +9,11 @@ class Square:
     def __str__(self) -> str:
         return str(self.__column) + ', ' + str(self.__row)
 
+    def __eq__(self, other):
+        if isinstance(other, Square):
+            return self.__column == other.__column and self.__row == other.__row
+        return False
+
     def is_corner(self) -> bool:
         is_top_left_corner: bool = self.__column == 0 and self.__row == 0
         is_top_right_corner: bool = self.__column == 15 and self.__row == 0

@@ -51,17 +51,28 @@ object "possibility_1_placedPiece: PlacedPiece" as possibility1PlacedPiece {
 object "possibility_2_placedPiece: PlacedPiece" as possibility2PlacedPiece {
 }
 
+object "step11: Step" as step11 {
+}
+
+object "step21: Step" as step21 {
+}
+
+
 ' Define relationships
 itinerary *-- path : path
 path *-- situation : situation
-path o-- step1 : steps[0]
-path o-- step2 : steps[1]
+path *-- step1 : steps[0]
+path *-down- step2 : steps[1]
 step1 *-- square1 : square
+step11 *-- square2 : square
+step21 *-- square2 : square
 step2 *-- square2 : square
-step1 o-- possibility1Path : generatedPaths[0]
-step1 o-- possibility2Path : generatedPaths[1]
+step1 *-- possibility1Path : generatedPaths[0]
+step1 *-- possibility2Path : generatedPaths[1]
 possibility1Path *-- possibility1Situation : situation
+possibility1Path o-right- step11 : steps[0]
 possibility2Path *-- possibility2Situation : situation
+possibility2Path o-right- step21 : steps[0]
 possibility1Situation *-- possibility1PlacedPiece : placedPieces[0]
 possibility2Situation *-- possibility2PlacedPiece : placedPieces[0]
 possibility1PlacedPiece *-- square1 : square

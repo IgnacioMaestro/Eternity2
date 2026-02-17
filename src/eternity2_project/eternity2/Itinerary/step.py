@@ -10,6 +10,13 @@ class Step:
     def __str__(self):
         return str(self.__square)
 
+    def __eq__(self, other):
+        if isinstance(other, Step):
+            is_equal_square = self.__square == other.get_square()
+            is_equal_generated_paths = self.__generated_paths == other.__generated_paths
+            return is_equal_square and is_equal_generated_paths
+        return False
+
     def add_path(self, path: ReferencePath):
         self.__generated_paths.append(path)
 
