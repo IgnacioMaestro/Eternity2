@@ -22,6 +22,9 @@ class Path(ReferencePath):
         str_rest_of_steps = ", Rest of the steps: " + str(len(self.__rest_steps))
         return str_situation + str_next_step + str_rest_of_steps
 
+    def is_leaf(self):
+        return self.__next_step is None
+
     def print(self):
         print('Placed pieces:')
         self.__situation.print()
