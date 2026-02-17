@@ -16,7 +16,7 @@ package Game{
         number: integer
     }
     class Constraints {
-        up: GColor
+        up: Color
         right: Color
         down: Color
         left: Color
