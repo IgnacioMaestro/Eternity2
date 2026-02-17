@@ -29,7 +29,8 @@ class Path(ReferencePath):
         print('Placed pieces:')
         self.__situation.print()
         print('Steps:')
-        for step in self.__steps:
+        print(str(self.__next_step))
+        for step in self.__rest_steps:
             print(str(step))
 
     def get_first_step(self) -> Step:
