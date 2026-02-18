@@ -16,7 +16,7 @@ class Step:
 
     @classmethod
     def create_evaluated_step(cls, square: Square) -> 'Step':
-        return cls(square, [], False)
+        return cls(square, [], True)
 
     def __str__(self):
         return str(self.__square)
@@ -31,6 +31,9 @@ class Step:
 
     def is_evaluated(self) -> bool:
         return self.__is_evaluated
+
+    def mark_as_evaluated(self):
+        self.__is_evaluated = True
 
     def add_path(self, path: ReferencePath):
         self.__generated_paths.append(path)

@@ -12,6 +12,13 @@ class PlacedPiece:
     def __str__(self) -> str:
         return str(self.__rotated_piece) + ', ' + str(self.__square)
 
+    def __eq__(self, other):
+        if not isinstance(other, PlacedPiece):
+            return False
+        is_equal_square = self.__square == other.__square
+        is_equal_rotated_piece = self.__rotated_piece == other.__rotated_piece
+        return is_equal_square and is_equal_rotated_piece
+
     def get_piece(self) -> Piece:
         return self.__rotated_piece.get_piece()
 

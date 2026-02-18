@@ -26,7 +26,7 @@ class Situation:
         if not is_equal_placed_pieces_num:
             return False
         for index, placed_piece in enumerate(self.__placed_pieces):
-            if placed_piece == other.__placed_pieces[index]:
+            if placed_piece != other.__placed_pieces[index]:
                 return False
         return True
 

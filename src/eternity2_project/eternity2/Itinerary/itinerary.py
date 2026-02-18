@@ -3,6 +3,7 @@ from typing import Self
 from src.eternity2_project.eternity2.Itinerary.path import Path
 from src.eternity2_project.eternity2.Itinerary.step import Step
 from src.eternity2_project.eternity2.game.board import Board
+from src.eternity2_project.eternity2.rotated_piece.rotated_piece import RotatedPiece
 from src.eternity2_project.eternity2.situation.situation import Situation
 
 
@@ -35,21 +36,21 @@ class Itinerary:
         self.__path.print()
 
     def generate_next_step_in_deep(self) -> bool:
-        # If path has no steps False
         if not self.__path.has_steps():
             return False
 
-        # If first step is not evaluated
-            # If step has no possibilities False
+        first_step: Step = self.__path.get_first_step()
+        if not first_step.is_evaluated():
+            rotated_pieces: list[RotatedPiece] = self.__path.get_situation().calculate_possibilities(
+                first_step.get_square())
+            if len(rotated_pieces) == 0:
+                first_step.mark_as_evaluated()
+                return False
 
+            # If step has no possibilities False
 
             # Else expand step and mark evaluated
 
         # If first step is evaluated change path
 
-
-        if not self.__path.get_first_step().is_evaluated():
-            return False
-
         return True
-
