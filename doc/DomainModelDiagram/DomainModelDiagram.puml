@@ -61,7 +61,9 @@ package Itinerary {
         name: string
     }
     class Path
-    class Step
+    class Step {
+        is_evaluated: bool
+    }
     Path *--> Step : "next"
     Path *--> "0.N" Step : "rest"
     Itinerary *--> Path
