@@ -27,7 +27,7 @@ class TestPath(TestCase):
     def test_str_one_steps(self):
         # Arrange
         situation: Situation = Situation([])
-        step: Step = Step(Square(1, 0))
+        step: Step = Step.create_no_evaluated_step(Square(1, 0))
         path: Path = Path(situation, [step])
 
         # Act
@@ -41,8 +41,8 @@ class TestPath(TestCase):
     def test_str_two_steps(self):
         # Arrange
         situation: Situation = Situation([])
-        first_step: Step = Step(Square(1, 0))
-        second_step: Step = Step(Square(1, 1))
+        first_step: Step = Step.create_no_evaluated_step(Square(1, 0))
+        second_step: Step = Step.create_no_evaluated_step(Square(1, 1))
         path: Path = Path(situation, [first_step, second_step])
 
         # Act
@@ -59,7 +59,7 @@ class TestPath(TestCase):
         rotated_piece: RotatedPiece = RotatedPiece(PieceSet().get_piece(1), Rotation.DEGREE_90)
         mock_calculate_possibilities.return_value = [rotated_piece, rotated_piece, rotated_piece, rotated_piece]
         board = Board()
-        step: Step = Step(board.get_square(0, 0))
+        step: Step = Step.create_no_evaluated_step(board.get_square(0, 0))
         path: Path = Path(Situation([]), [step])
 
         # Act

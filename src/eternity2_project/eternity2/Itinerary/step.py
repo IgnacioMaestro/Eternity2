@@ -3,9 +3,20 @@ from src.eternity2_project.eternity2.game.square import Square
 
 
 class Step:
-    def __init__(self, square: Square):
+    def __init__(self, square: Square, generated_paths=None, is_evaluated: bool = False):
+        if generated_paths is None:
+            generated_paths = []
         self.__square: Square = square
-        self.__generated_paths: list[ReferencePath] = []
+        self.__generated_paths: list[ReferencePath] = generated_paths
+        self.__is_evaluated: bool = is_evaluated
+
+    @classmethod
+    def create_no_evaluated_step(cls, square: Square) -> 'Step':
+        return cls(square)
+
+    @classmethod
+    def create_evaluated_step(cls, square: Square) -> 'Step':
+        return cls(square, [], False)
 
     def __str__(self):
         return str(self.__square)
@@ -14,8 +25,12 @@ class Step:
         if isinstance(other, Step):
             is_equal_square = self.__square == other.get_square()
             is_equal_generated_paths = self.__generated_paths == other.__generated_paths
-            return is_equal_square and is_equal_generated_paths
+            is_equal_evaluated = self.__is_evaluated == other.__is_evaluated
+            return is_equal_square and is_equal_generated_paths and is_equal_evaluated
         return False
+
+    def is_evaluated(self) -> bool:
+        return self.__is_evaluated
 
     def add_path(self, path: ReferencePath):
         self.__generated_paths.append(path)
@@ -31,3 +46,4 @@ class Step:
 
     def get_square(self) -> Square:
         return self.__square
+

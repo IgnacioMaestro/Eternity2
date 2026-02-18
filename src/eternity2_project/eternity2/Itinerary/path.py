@@ -16,6 +16,11 @@ class Path(ReferencePath):
             self.__next_step = steps[0]
             self.__rest_steps: list[Step] = steps[1:]
 
+    def __eq__(self, other) -> bool:
+        if not isinstance(other, Path):
+            return False
+        return self.__situation == other.__situation and self.__next_step == other.__next_step and self.__rest_steps == other.__rest_steps
+
     def __str__(self) -> str:
         str_situation = "Placed pieces: " + str(self.__situation)
         str_next_step = ", Next step: " + str(self.__next_step)
@@ -24,6 +29,9 @@ class Path(ReferencePath):
 
     def is_leaf(self):
         return self.__next_step is None
+
+    def has_steps(self):
+        return self.__next_step is not None
 
     def print(self):
         print('Placed pieces:')
@@ -50,6 +58,7 @@ class Path(ReferencePath):
         for rotated_piece in rotated_pieces:
             path = self.create_new_path(rotated_piece, square)
             self.get_first_step().add_path(path)
+
 
     def create_new_path(self, rotated_piece, square):
         situation = Situation.create_from(self.__situation)
